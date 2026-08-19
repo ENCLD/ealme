@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f5f5f3;
+    color: #222;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+
+/* ==============================
+   Top Menu
+   ============================== */
+
+.top-menu {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background: rgba(245, 245, 243, 0.92);
+    border-bottom: 1px solid #e5e5e2;
+    backdrop-filter: blur(12px);
+}
+
+.nav-inner {
+    width: min(1000px, calc(100% - 40px));
+    height: 64px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo {
+    color: #222;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+    .nav-links a {
+        padding: 8px 12px;
+        border-radius: 7px;
+        color: #777;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+
+        .nav-links a:hover {
+            background: #e9e9e6;
+            color: #222;
+        }
+
+        .nav-links a.active {
+            background: #222;
+            color: #fff;
+        }
+
+
+/* ==============================
+   Main Content
+   ============================== */
+
+.container {
+    width: min(800px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+
+/* Page Header */
+
+.page-header {
+    margin-bottom: 45px;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: #999;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(36px, 6vw, 52px);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+
+/* ==============================
+   Daily Cards
+   ============================== */
+
+.days {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.day-card {
+    padding: 26px;
+    background: #fff;
+    border: 1px solid #e5e5e2;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.day-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.day-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #222;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.day-header time {
+    color: #777;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.day-card p {
+    margin: 0;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   Mobile
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .nav-inner {
+        width: calc(100% - 24px);
+    }
+
+    .nav-links {
+        gap: 2px;
+    }
+
+        .nav-links a {
+            padding: 7px 8px;
+            font-size: 13px;
+        }
+
+            .nav-links a:nth-child(n + 4) {
+                display: none;
+            }
+
+    .container {
+        width: calc(100% - 24px);
+        padding: 45px 0;
+    }
+
+    .day-card {
+        padding: 20px;
+    }
+}

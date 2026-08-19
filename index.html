@@ -1,13 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>ealme</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dagbok</title>
+
+    <link rel="stylesheet" href="site.css">
 </head>
 
-  <body>
-    <h1>
-      Daily Summary
-    </h1>
-    <h2>08/19/2026</h2>
-  </body>
+<body>
+
+    <nav class="top-menu">
+        <div class="nav-inner">
+
+            <a href="index.html" class="logo">ealme</a>
+
+            <div class="nav-links">
+                <a href="index.html" class="active">Dag</a>
+                <a href="notes.html">Notes</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <main class="container">
+
+        <header class="page-header">
+            <p class="eyebrow">Dag</p>
+            <h1>Daily Summary</h1>
+        </header>
+
+
+        <section class="days">
+
+            <article class="day-card">
+
+                <div class="day-header">
+                    <span class="day-number">01</span>
+
+                    <time datetime="2026-08-19">
+                        August 19, 2026
+                    </time>
+                </div>
+
+                <p>
+                    Onboarding. ServiceNow.
+                </p>
+
+            </article>
+
+
+            <article class="day-card">
+
+                <div class="day-header">
+                    <span class="day-number">02</span>
+
+                    <time datetime="2026-08-20">
+                        August 20, 2026
+                    </time>
+                </div>
+
+                <p>
+                    Dag 2.
+                </p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+</body>
 </html>
