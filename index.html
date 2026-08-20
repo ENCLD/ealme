@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Dagbok</title>
-
     <link rel="stylesheet" href="site.css">
+
+    <style>
+        /* Container alignment for language switchers */
+        .controls {
+            display: inline-flex;
+            gap: 6px;
+            background-color: #f1f3f5;
+            padding: 4px;
+            border-radius: 30px; /* Outer rounded track */
+        }
+
+            /* Standard round button style rules */
+            .controls button {
+                background: transparent;
+                color: #495057;
+                border: none;
+                padding: 6px 14px;
+                font-size: 13px;
+                font-weight: 600;
+                font-family: inherit;
+                cursor: pointer;
+                border-radius: 20px; /* Pill-shaped round design */
+                transition: all 0.2s ease-in-out;
+            }
+
+                /* Hover animation properties */
+                .controls button:hover {
+                    color: #1a1a1a;
+                }
+
+                /* Active highlight status styling profile */
+                .controls button.active {
+                    background-color: #ffffff;
+                    color: #000000;
+                    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+                }
+    </style>
 </head>
 
 <body>
@@ -17,10 +52,17 @@
             <a href="index.html" class="logo">ealme</a>
 
             <div class="nav-links">
-                <a href="index.html" class="active">Dagbok</a>
-                <a href="projects.html">Prosjekt</a>
-                <a href="about.html">Links</a>
-                <a href="Media.html">Media</a>
+                <!-- Data attributes now point directly to their English counterparts -->
+                <a href="index.html" class="active" data-i18n="nav-dagbok">Dagbok</a>
+                <a href="projects.html" data-i18n="nav-prosjekt">Prosjekter</a>
+                <a href="about.html" data-i18n="nav-links">Links</a>
+                <a href="Media.html" data-i18n="nav-media">Media</a>
+            </div>
+
+            <!-- Styled Pill Container Switch -->
+            <div class="controls">
+                <button id="btn-no" class="active" onclick="setLanguage('no')">Norsk</button>
+                <button id="btn-en" onclick="setLanguage('en')">English</button>
             </div>
         </div>
     </nav>
@@ -29,52 +71,108 @@
     <main class="container">
 
         <header class="page-header">
-            <p class="eyebrow">Dokumentasjon</p>
-            <h1>Dagbok</h1>
+            <p class="eyebrow" data-i18n="header-eyebrow">Dokumentasjon</p>
+            <h1 data-i18n="header-title">Dagbok</h1>
         </header>
 
 
         <section class="days">
 
             <article class="day-card">
-
                 <div class="day-header">
                     <span class="day-number">01</span>
-
-                    <time datetime="2026-08-19">
-                        August 19, 2026
+                    <time datetime="2026-08-19" data-i18n="day1-date">
+                        19. august 2026
                     </time>
                 </div>
-
-                <p>
+                <p data-i18n="day1-text">
                     I dag har vi hatt første dag hos KPMG. Dagen startet med en liten runde på kontoret.
                     Etter å ha truffet mange hyggelig mennesker tok vi turen inn på møterommet for å få litt informasjon om oppstart.
                     Etter lunsj startet vi onboarding prosessen i ServiceNow. Etter noen kurs videoer ble det kake. Noen ansatte i KPMG hadde landet en kontrakt som måtte feires.
                     Ettermiddagen ble fylt med litt mer opplæringsvideoer, og deretter god mat og gode samtaler på Flua Pizza. God start på praksisen!
                 </p>
-
             </article>
 
 
             <article class="day-card">
-
                 <div class="day-header">
                     <span class="day-number">02</span>
-
-                    <time datetime="2026-08-20">
-                        August 20, 2026
+                    <time datetime="2026-08-20" data-i18n="day2-date">
+                        20. august 2026
                     </time>
                 </div>
-
-                <p>
-                    Dag 2.
+                <p data-i18n="day2-text">
+                    Andre dag hos KPMG gikk for det meste i å fullføre ServiceNow kurset. Midt på dagen hadde vi et lite møte for å løse eventuelle problemer og hindringer.
                 </p>
+            </article>
 
+            <article class="day-card">
+                <div class="day-header">
+                    <span class="day-number">03</span>
+                    <time datetime="2026-08-26" data-i18n="day3-date">
+                        26. august 2026
+                    </time>
+                </div>
+                <p data-i18n="day3-text">
+                    Dag 3.
+                </p>
             </article>
 
         </section>
 
     </main>
+
+    <script>
+        // JavaScript only needs the English data
+        const translations = {
+            en: {
+                "nav-dagbok": "Diary",
+                "nav-prosjekt": "Projects",
+                "nav-links": "Links",
+                "nav-media": "Media",
+                "header-eyebrow": "Documentation",
+                "header-title": "Diary",
+                "day1-date": "August 19, 2026",
+                "day1-text": "Today we had our first day at KPMG. The day started with a quick tour of the office. After meeting many nice people, we went into the meeting room to receive some orientation info. After lunch, we started the onboarding process in ServiceNow. After a few training videos, there was cake! Some KPMG employees had landed a contract that had to be celebrated. The afternoon was filled with a few more training videos, followed by good food and great conversations at Flua Pizza. A great start to our internship!",
+                "day2-date": "August 20, 2026",
+                "day2-text": "The second day at KPMG was mostly spent finishing the ServiceNow course. In the middle of the day, we had a short meeting to resolve any issues and obstacles.",
+                "day3-date": "August 26, 2026",
+                "day3-text": "Day 3."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-i18n]');
+
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+
+                // 1. If it's the first time running, save whatever original Norwegian is written in the HTML markup
+                if (!element.hasAttribute('data-original-no')) {
+                    element.setAttribute('data-original-no', element.textContent.trim());
+                }
+
+                // 2. Route text values based on language choice
+                if (lang === 'en' && translations.en[key]) {
+                    element.textContent = translations.en[key];
+                } else {
+                    // Fall back cleanly to the original saved Norwegian text
+                    element.textContent = element.getAttribute('data-original-no');
+                }
+            });
+
+            document.getElementById('btn-no').classList.toggle('active', lang === 'no');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+            localStorage.setItem('diaryLanguage', lang);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('diaryLanguage') || 'no';
+            setLanguage(savedLang);
+        });
+    </script>
 
 </body>
 </html>
