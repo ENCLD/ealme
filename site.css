@@ -24,9 +24,7 @@ body {
     --card-shadow: rgba(0, 0, 0, 0.03);
 }
 
-/* ==============================
-   Top Menu
-   ============================== */
+/* Top Menu */
 
 .top-menu {
     position: sticky;
@@ -202,16 +200,18 @@ h1 {
    ============================== */
 
 .day-image {
-    width: 50%;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto 0;
     border-radius: 5%;
-    /* Smooth animation */
     transition: transform 0.35s ease, box-shadow 0.35s ease;
-    /* Better performance */
     will-change: transform;
 }
 
     .day-image:hover {
-        transform: scale(1.05) translateY(-4px);
+        transform: scale(1.02) translateY(-4px);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     }
 
