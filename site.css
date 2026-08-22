@@ -24,9 +24,7 @@ body {
     --card-shadow: rgba(0, 0, 0, 0.03);
 }
 
-/* ==============================
-   Top Menu
-   ============================== */
+/* Top Menu */
 
 .top-menu {
     position: sticky;
