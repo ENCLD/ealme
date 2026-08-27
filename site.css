@@ -155,6 +155,13 @@ h1 {
     letter-spacing: -0.05em;
 }
 
+.page-note {
+    margin: 14px 0 0;
+    color: var(--secondary-text);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
 /* ==============================
    Projects
    ============================== 
@@ -255,7 +262,21 @@ h1 {
 .days {
     display: flex;
     flex-direction: column;
+    gap: 40px;
+}
+
+.week-group {
+    display: flex;
+    flex-direction: column;
     gap: 16px;
+}
+
+.week-heading {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--primary-text);
 }
 
 .day-card {
