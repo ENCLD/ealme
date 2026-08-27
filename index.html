@@ -50,13 +50,24 @@
         <div class="nav-inner">
             <a href="index.html" class="logo">
                 <span class="logo-title">KPMG</span>
-                <span class="logo-sub">Praksisstudenter dagbok</span>
+                <span class="logo-sub" data-i18n="logo-sub">Praksisstudenter dagbok</span>
             </a>
 
             <!-- This will hide/show based on the site.css mobile setup -->
             <div class="nav-links" id="navMenu">
-                <a href="index.html" class="active" data-i18n="nav-dagbok">Dagbok</a>
-                <a href="projects.html" data-i18n="nav-prosjekt">Prosjekter</a>
+                <a href="index.html" class="active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 5.5C4 4.67 4.67 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13Z" />
+                        <path d="M20 5.5c0-.83-.67-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z" />
+                    </svg>
+                    <span data-i18n="nav-dagbok">Dagbok</span>
+                </a>
+                <a href="projects.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 7a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Z" />
+                    </svg>
+                    <span data-i18n="nav-prosjekt">Prosjekter</span>
+                </a>
             </div>
 
             <!-- Container for buttons -->
@@ -74,6 +85,8 @@
                     <span class="bar"></span>
                 </button>
             </div>
+
+            <p class="sidebar-caption" data-i18n="sidebar-caption">KPMG praksis &middot; Høst 2026</p>
         </div>
     </nav>
 
@@ -88,6 +101,62 @@
             </p>
         </header>
 
+        <section class="stat-grid">
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="16" rx="2" />
+                        <line x1="3" y1="9" x2="21" y2="9" />
+                        <line x1="8" y1="3" x2="8" y2="7" />
+                        <line x1="16" y1="3" x2="16" y2="7" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value" data-i18n="stat-week-value">Uke 34</span>
+                    <span class="stat-label" data-i18n="stat-week-label">Gjeldende uke</span>
+                </span>
+            </div>
+
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="9" />
+                        <polyline points="8 12.5 11 15.5 16 9" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value">2</span>
+                    <span class="stat-label" data-i18n="stat-days-label">Dager logget</span>
+                </span>
+            </div>
+
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="9" />
+                        <polyline points="12 7 12 12 16 14" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value" data-i18n="stat-fixed-value">Ons &middot; Tor</span>
+                    <span class="stat-label" data-i18n="stat-fixed-label">Faste kontordager</span>
+                </span>
+            </div>
+
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="8" width="18" height="12" rx="2" />
+                        <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                        <line x1="3" y1="13" x2="21" y2="13" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value" data-i18n="stat-period-value">Høst 2026</span>
+                    <span class="stat-label" data-i18n="stat-period-label">Praksisperiode</span>
+                </span>
+            </div>
+        </section>
 
         <section class="days">
 
@@ -135,9 +204,18 @@
             en: {
                 "nav-dagbok": "Diary",
                 "nav-prosjekt": "Projects",
+                "logo-sub": "Intern diary",
+                "sidebar-caption": "KPMG internship &middot; Autumn 2026",
                 "header-eyebrow": "Documentation",
                 "header-title": "Diary",
                 "header-note": "Agreed office days are 1–2 days per week. Wednesdays and Thursdays work best.",
+                "stat-week-value": "Week 34",
+                "stat-week-label": "Current week",
+                "stat-days-label": "Days logged",
+                "stat-fixed-value": "Wed &middot; Thu",
+                "stat-fixed-label": "Fixed office days",
+                "stat-period-value": "Autumn 2026",
+                "stat-period-label": "Internship period",
                 "week34-heading": "Week 34",
                 "day1-date": "August 19, 2026",
                 "day1-text": "Today we had our first day at KPMG. The day started with a quick tour of the office. After meeting many nice people, we went into the meeting room to receive some orientation info. After lunch, we started the onboarding process in ServiceNow. After a few training videos, there was cake! Some KPMG employees had landed a contract that had to be celebrated. The afternoon was filled with a few more training videos, followed by good food and great conversations at Flua Pizza. A great start to our internship!",
@@ -155,15 +233,15 @@
 
                 // 1. If it's the first time running, save whatever original Norwegian is written in the HTML markup
                 if (!element.hasAttribute('data-original-no')) {
-                    element.setAttribute('data-original-no', element.textContent.trim());
+                    element.setAttribute('data-original-no', element.innerHTML.trim());
                 }
 
                 // 2. Route text values based on language choice
                 if (lang === 'en' && translations.en[key]) {
-                    element.textContent = translations.en[key];
+                    element.innerHTML = translations.en[key];
                 } else {
                     // Fall back cleanly to the original saved Norwegian text
-                    element.textContent = element.getAttribute('data-original-no');
+                    element.innerHTML = element.getAttribute('data-original-no');
                 }
             });
 

@@ -50,13 +50,24 @@
         <div class="nav-inner">
             <a href="index.html" class="logo">
                 <span class="logo-title">KPMG</span>
-                <span class="logo-sub">Praksisstudenter dagbok</span>
+                <span class="logo-sub" data-i18n="logo-sub">Praksisstudenter dagbok</span>
             </a>
 
             <!-- This will hide/show based on your site.css mobile setup -->
             <div class="nav-links" id="navMenu">
-                <a href="index.html" data-i18n="nav-dagbok">Dagbok</a>
-                <a href="projects.html" class="active" data-i18n="nav-prosjekt">Prosjekter</a>
+                <a href="index.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 5.5C4 4.67 4.67 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13Z" />
+                        <path d="M20 5.5c0-.83-.67-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z" />
+                    </svg>
+                    <span data-i18n="nav-dagbok">Dagbok</span>
+                </a>
+                <a href="projects.html" class="active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 7a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Z" />
+                    </svg>
+                    <span data-i18n="nav-prosjekt">Prosjekter</span>
+                </a>
             </div>
 
             <!-- Container for buttons -->
@@ -74,6 +85,8 @@
                     <span class="bar"></span>
                 </button>
             </div>
+
+            <p class="sidebar-caption" data-i18n="sidebar-caption">KPMG praksis &middot; Høst 2026</p>
         </div>
     </nav>
 
@@ -84,6 +97,64 @@
             <p class="eyebrow" data-i18n="header-eyebrow">Dokumentasjon</p>
             <h1 data-i18n="header-title">Prosjekter</h1>
         </header>
+
+        <section class="stat-grid">
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 7a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Z" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value">2</span>
+                    <span class="stat-label" data-i18n="stat-projects-label">Prosjekter</span>
+                </span>
+            </div>
+
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="9" />
+                        <circle cx="12" cy="12" r="5" />
+                        <circle cx="12" cy="12" r="1" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value">4</span>
+                    <span class="stat-label" data-i18n="stat-axes-label">Fokusområder</span>
+                </span>
+            </div>
+
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="8" r="3" />
+                        <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" />
+                        <circle cx="17" cy="9" r="2.5" />
+                        <path d="M15.5 14.2c2.6.5 4.5 2.7 4.5 5.3" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value">2</span>
+                    <span class="stat-label" data-i18n="stat-students-label">Praksisstudenter</span>
+                </span>
+            </div>
+
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="8" height="8" rx="1.5" />
+                        <rect x="13" y="3" width="8" height="8" rx="1.5" />
+                        <rect x="3" y="13" width="8" height="8" rx="1.5" />
+                        <rect x="13" y="13" width="8" height="8" rx="1.5" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value">ServiceNow</span>
+                    <span class="stat-label" data-i18n="stat-platform-label">Plattform</span>
+                </span>
+            </div>
+        </section>
 
 
         <section class="projects">
@@ -135,8 +206,14 @@
             en: {
                 "nav-dagbok": "Diary",
                 "nav-prosjekt": "Projects",
+                "logo-sub": "Intern diary",
+                "sidebar-caption": "KPMG internship &middot; Autumn 2026",
                 "header-eyebrow": "Documentation",
                 "header-title": "Projects",
+                "stat-projects-label": "Projects",
+                "stat-axes-label": "Focus areas",
+                "stat-students-label": "Interns",
+                "stat-platform-label": "Platform",
                 "projects-heading": "Our projects",
                 "projects-intro": "Throughout the autumn semester at KPMG, Einar and I are working on two interconnected projects within ServiceNow development, with our main focus on exploring and documenting how the AI tool Claude Code can be used in the development process on the platform.",
                 "project-badge-main": "Main project",
@@ -160,15 +237,15 @@
 
                 // 1. If it's the first time running, save whatever original Norwegian is written in the HTML markup
                 if (!element.hasAttribute('data-original-no')) {
-                    element.setAttribute('data-original-no', element.textContent.trim());
+                    element.setAttribute('data-original-no', element.innerHTML.trim());
                 }
 
                 // 2. Route text values based on language choice
                 if (lang === 'en' && translations.en[key]) {
-                    element.textContent = translations.en[key];
+                    element.innerHTML = translations.en[key];
                 } else {
                     // Fall back cleanly to the original saved Norwegian text
-                    element.textContent = element.getAttribute('data-original-no');
+                    element.innerHTML = element.getAttribute('data-original-no');
                 }
             });
 
