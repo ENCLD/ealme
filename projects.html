@@ -85,12 +85,40 @@
 
         <section class="projects">
 
+            <h2 class="projects-heading" data-i18n="projects-heading">Prosjektene våre</h2>
+            <p class="projects-intro" data-i18n="projects-intro">
+                Gjennom høstsemesteret hos KPMG jobber jeg og Einar med to sammenhengende prosjekter innenfor ServiceNow-utvikling, der hovedfokuset vårt er å utforske og dokumentere hvordan AI-verktøyet Claude Code kan brukes i utviklingsprosessen på plattformen.
+            </p>
+
             <article class="project-card">
                 <div class="project-header">
-                    <span class="project-name">ealme-web</span>
+                    <span class="project-name" data-i18n="project-badge-main">Hovedprosjekt</span>
+                    <h3 class="project-title" data-i18n="project-main-title">Metodikk for bruk av Claude Code i ServiceNow-utvikling</h3>
                 </div>
-                <p data-i18n="project-web-ealme">
-                    Vi har bygget en nettside
+                <p data-i18n="project-main-p1">
+                    Det primære leveransen vår er dokumentasjon av beste praksis for hvordan Claude Code kan integreres i en ServiceNow-utviklingssyklus (SDLC). Vi undersøker dette langs fire akser: prompting-strategi, kontekststyring, arbeidsflyt og kvalitetskontroll. Målet er å produsere praktisk anvendelig veiledning som kan brukes av andre utviklere i lignende prosjekter, ikke bare et engangsfunn fra vårt eget prosjekt.
+                </p>
+                <p data-i18n="project-main-p2">
+                    Vi samler funnene fortløpende i et eget dokumentasjons-repo (claude-code-sdlc-methodology), strukturert etter de fire aksene. Hvert eksperiment vi gjennomfører logges systematisk med hvilken prompt som ble brukt, hvilken kontekst Claude Code hadde tilgjengelig, hva resultatet ble, og hvilke manuelle korreksjoner som var nødvendige. Denne systematiske tilnærmingen gjør at vi kan sammenligne ulike metoder objektivt, i stedet for å basere konklusjoner på enkeltinntrykk.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-name" data-i18n="project-badge-support">Støtteprosjekt</span>
+                    <h3 class="project-title" data-i18n="project-support-title">Applikasjon for ressursallokering</h3>
+                </div>
+                <p data-i18n="project-support-p1">
+                    For å ha et konkret og realistisk case å teste metodikken på, bygger vi parallelt en ServiceNow-applikasjon for ressursallokering. Dette prosjektet er i seg selv ikke hovedmålet — det fungerer som et testmiljø der vi kan gjenskape samme applikasjon flere ganger med ulike tilnærminger til Claude Code, for å produsere sammenlignbare funn til metodikk-dokumentasjonen. Vi eksperimenterer blant annet med å koble applikasjonen til et eget kildekode-repo via ServiceNow sin Source Control-modul, slik at Claude Code kan jobbe med applikasjonskoden lokalt før endringene importeres tilbake til instansen.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-name" data-i18n="project-badge-learning">Læringsutbytte</span>
+                </div>
+                <p data-i18n="project-learning-p1">
+                    Kombinasjonen av de to prosjektene gir oss praktisk erfaring med sentrale deler av ServiceNow-utvikling — blant annet scoped applications, Studio, Source Control-integrasjon og applikasjonsarkitektur — samtidig som vi opparbeider oss en mer overordnet forståelse av hvordan AI-assisterte utviklingsverktøy best kan tas i bruk i en strukturert utviklingsprosess. Vi anser dette som spesielt relevant erfaring, både fordi ServiceNow-utvikling er en direkte overførbar ferdighet, og fordi metodikken vi dokumenterer rundt AI-assistert utvikling er et område i rask utvikling som blir stadig mer relevant i konsulentbransjen.
                 </p>
             </article>
 
@@ -106,7 +134,17 @@
                 "nav-prosjekt": "Projects",
                 "header-eyebrow": "Documentation",
                 "header-title": "Projects",
-                "project-web-ealme": "We built a website"
+                "projects-heading": "Our projects",
+                "projects-intro": "Throughout the autumn semester at KPMG, Einar and I are working on two interconnected projects within ServiceNow development, with our main focus on exploring and documenting how the AI tool Claude Code can be used in the development process on the platform.",
+                "project-badge-main": "Main project",
+                "project-main-title": "Methodology for Using Claude Code in ServiceNow Development",
+                "project-main-p1": "Our primary deliverable is documentation of best practices for how Claude Code can be integrated into a ServiceNow development lifecycle (SDLC). We investigate this along four axes: prompting strategy, context management, workflow, and quality control. The goal is to produce practically applicable guidance that other developers can use in similar projects, not just a one-off finding from our own project.",
+                "project-main-p2": "We continuously gather our findings in a dedicated documentation repository (claude-code-sdlc-methodology), structured according to the four axes. Each experiment we run is logged systematically with which prompt was used, what context Claude Code had available, what the outcome was, and what manual corrections were necessary. This systematic approach lets us compare different methods objectively, rather than basing conclusions on individual impressions.",
+                "project-badge-support": "Support project",
+                "project-support-title": "Resource Allocation Application",
+                "project-support-p1": "To have a concrete and realistic case to test the methodology on, we are simultaneously building a ServiceNow application for resource allocation. This project is not the main goal in itself — it serves as a test environment where we can recreate the same application multiple times using different approaches to Claude Code, to produce comparable findings for the methodology documentation. Among other things, we are experimenting with connecting the application to a dedicated source code repository via ServiceNow's Source Control module, so that Claude Code can work with the application code locally before the changes are imported back into the instance.",
+                "project-badge-learning": "Learning outcomes",
+                "project-learning-p1": "The combination of the two projects gives us practical experience with key parts of ServiceNow development — including scoped applications, Studio, Source Control integration, and application architecture — while also building a broader understanding of how AI-assisted development tools can best be adopted in a structured development process. We consider this especially relevant experience, both because ServiceNow development is a directly transferable skill, and because the methodology we are documenting around AI-assisted development is a fast-moving area that is becoming increasingly relevant in the consulting industry."
             }
         };
 

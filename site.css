@@ -160,6 +160,21 @@ h1 {
    ============================== 
 */
 
+.projects-heading {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--primary-text);
+}
+
+.projects-intro {
+    margin: 0 0 26px;
+    color: var(--secondary-text);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
 .projects {
     display: flex;
     flex-direction: column;
@@ -174,10 +189,21 @@ h1 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
+.project-card p {
+    color: var(--secondary-text);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+    .project-card p + p {
+        margin-top: 12px;
+    }
+
 .project-header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
     margin-bottom: 18px;
 }
 
@@ -185,14 +211,24 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
+    width: auto;
+    min-width: 100px;
     height: 34px;
+    padding: 0 16px;
     border-radius: 15px;
     background: #222;
     color: #fff;
     font-size: 12px;
     font-weight: 600;
-    
+    white-space: nowrap;
+}
+
+.project-title {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--primary-text);
 }
 
 /* ==============================
