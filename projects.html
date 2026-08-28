@@ -48,12 +48,26 @@
 
     <nav class="top-menu">
         <div class="nav-inner">
-            <a href="index.html" class="logo">ealme</a>
+            <a href="index.html" class="logo">
+                <span class="logo-title">KPMG</span>
+                <span class="logo-sub" data-i18n="logo-sub">Praksisstudenter dagbok</span>
+            </a>
 
             <!-- This will hide/show based on your site.css mobile setup -->
             <div class="nav-links" id="navMenu">
-                <a href="index.html" data-i18n="nav-dagbok">Dagbok</a>
-                <a href="projects.html" class="active" data-i18n="nav-prosjekt">Prosjekter</a>
+                <a href="index.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 5.5C4 4.67 4.67 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13Z" />
+                        <path d="M20 5.5c0-.83-.67-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z" />
+                    </svg>
+                    <span data-i18n="nav-dagbok">Dagbok</span>
+                </a>
+                <a href="projects.html" class="active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 7a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Z" />
+                    </svg>
+                    <span data-i18n="nav-prosjekt">Prosjekter</span>
+                </a>
             </div>
 
             <!-- Container for buttons -->
@@ -71,6 +85,8 @@
                     <span class="bar"></span>
                 </button>
             </div>
+
+            <p class="sidebar-caption" data-i18n="sidebar-caption">KPMG praksis &middot; Høst 2026</p>
         </div>
     </nav>
 
@@ -82,15 +98,101 @@
             <h1 data-i18n="header-title">Prosjekter</h1>
         </header>
 
+        <section class="stat-grid">
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 7a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Z" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value">2</span>
+                    <span class="stat-label" data-i18n="stat-projects-label">Prosjekter</span>
+                </span>
+            </div>
+
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="9" />
+                        <circle cx="12" cy="12" r="5" />
+                        <circle cx="12" cy="12" r="1" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value">4</span>
+                    <span class="stat-label" data-i18n="stat-axes-label">Fokusområder</span>
+                </span>
+            </div>
+
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="8" r="3" />
+                        <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" />
+                        <circle cx="17" cy="9" r="2.5" />
+                        <path d="M15.5 14.2c2.6.5 4.5 2.7 4.5 5.3" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value">2</span>
+                    <span class="stat-label" data-i18n="stat-students-label">Praksisstudenter</span>
+                </span>
+            </div>
+
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="8" height="8" rx="1.5" />
+                        <rect x="13" y="3" width="8" height="8" rx="1.5" />
+                        <rect x="3" y="13" width="8" height="8" rx="1.5" />
+                        <rect x="13" y="13" width="8" height="8" rx="1.5" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value">ServiceNow</span>
+                    <span class="stat-label" data-i18n="stat-platform-label">Plattform</span>
+                </span>
+            </div>
+        </section>
+
 
         <section class="projects">
 
+            <h2 class="projects-heading" data-i18n="projects-heading">Prosjektene våre</h2>
+            <p class="projects-intro" data-i18n="projects-intro">
+                Gjennom høstsemesteret hos KPMG jobber jeg og Einar med to sammenhengende prosjekter innenfor ServiceNow-utvikling, der hovedfokuset vårt er å utforske og dokumentere hvordan AI-verktøyet Claude Code kan brukes i utviklingsprosessen på plattformen.
+            </p>
+
             <article class="project-card">
                 <div class="project-header">
-                    <span class="project-name">ealme-web</span>
+                    <span class="project-name" data-i18n="project-badge-main">Hovedprosjekt</span>
+                    <h3 class="project-title" data-i18n="project-main-title">Metodikk for bruk av Claude Code i ServiceNow-utvikling</h3>
                 </div>
-                <p data-i18n="project-web-ealme">
-                    Vi har bygget en nettside
+                <p data-i18n="project-main-p1">
+                    Det primære leveransen vår er dokumentasjon av beste praksis for hvordan Claude Code kan integreres i en ServiceNow-utviklingssyklus (SDLC). Vi undersøker dette langs fire akser: prompting-strategi, kontekststyring, arbeidsflyt og kvalitetskontroll. Målet er å produsere praktisk anvendelig veiledning som kan brukes av andre utviklere i lignende prosjekter, ikke bare et engangsfunn fra vårt eget prosjekt.
+                </p>
+                <p data-i18n="project-main-p2">
+                    Vi samler funnene fortløpende i et eget dokumentasjons-repo (claude-code-sdlc-methodology), strukturert etter de fire aksene. Hvert eksperiment vi gjennomfører logges systematisk med hvilken prompt som ble brukt, hvilken kontekst Claude Code hadde tilgjengelig, hva resultatet ble, og hvilke manuelle korreksjoner som var nødvendige. Denne systematiske tilnærmingen gjør at vi kan sammenligne ulike metoder objektivt, i stedet for å basere konklusjoner på enkeltinntrykk.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-name" data-i18n="project-badge-support">Støtteprosjekt</span>
+                    <h3 class="project-title" data-i18n="project-support-title">Applikasjon for ressursallokering</h3>
+                </div>
+                <p data-i18n="project-support-p1">
+                    For å ha et konkret og realistisk case å teste metodikken på, bygger vi parallelt en ServiceNow-applikasjon for ressursallokering. Dette prosjektet er i seg selv ikke hovedmålet — det fungerer som et testmiljø der vi kan gjenskape samme applikasjon flere ganger med ulike tilnærminger til Claude Code, for å produsere sammenlignbare funn til metodikk-dokumentasjonen. Vi eksperimenterer blant annet med å koble applikasjonen til et eget kildekode-repo via ServiceNow sin Source Control-modul, slik at Claude Code kan jobbe med applikasjonskoden lokalt før endringene importeres tilbake til instansen.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-name" data-i18n="project-badge-learning">Læringsutbytte</span>
+                </div>
+                <p data-i18n="project-learning-p1">
+                    Kombinasjonen av de to prosjektene gir oss praktisk erfaring med sentrale deler av ServiceNow-utvikling — blant annet scoped applications, Studio, Source Control-integrasjon og applikasjonsarkitektur — samtidig som vi opparbeider oss en mer overordnet forståelse av hvordan AI-assisterte utviklingsverktøy best kan tas i bruk i en strukturert utviklingsprosess. Vi anser dette som spesielt relevant erfaring, både fordi ServiceNow-utvikling er en direkte overførbar ferdighet, og fordi metodikken vi dokumenterer rundt AI-assistert utvikling er et område i rask utvikling som blir stadig mer relevant i konsulentbransjen.
                 </p>
             </article>
 
@@ -104,9 +206,25 @@
             en: {
                 "nav-dagbok": "Diary",
                 "nav-prosjekt": "Projects",
+                "logo-sub": "Intern diary",
+                "sidebar-caption": "KPMG internship &middot; Autumn 2026",
                 "header-eyebrow": "Documentation",
                 "header-title": "Projects",
-                "project-web-ealme": "We built a website"
+                "stat-projects-label": "Projects",
+                "stat-axes-label": "Focus areas",
+                "stat-students-label": "Interns",
+                "stat-platform-label": "Platform",
+                "projects-heading": "Our projects",
+                "projects-intro": "Throughout the autumn semester at KPMG, Einar and I are working on two interconnected projects within ServiceNow development, with our main focus on exploring and documenting how the AI tool Claude Code can be used in the development process on the platform.",
+                "project-badge-main": "Main project",
+                "project-main-title": "Methodology for Using Claude Code in ServiceNow Development",
+                "project-main-p1": "Our primary deliverable is documentation of best practices for how Claude Code can be integrated into a ServiceNow development lifecycle (SDLC). We investigate this along four axes: prompting strategy, context management, workflow, and quality control. The goal is to produce practically applicable guidance that other developers can use in similar projects, not just a one-off finding from our own project.",
+                "project-main-p2": "We continuously gather our findings in a dedicated documentation repository (claude-code-sdlc-methodology), structured according to the four axes. Each experiment we run is logged systematically with which prompt was used, what context Claude Code had available, what the outcome was, and what manual corrections were necessary. This systematic approach lets us compare different methods objectively, rather than basing conclusions on individual impressions.",
+                "project-badge-support": "Support project",
+                "project-support-title": "Resource Allocation Application",
+                "project-support-p1": "To have a concrete and realistic case to test the methodology on, we are simultaneously building a ServiceNow application for resource allocation. This project is not the main goal in itself — it serves as a test environment where we can recreate the same application multiple times using different approaches to Claude Code, to produce comparable findings for the methodology documentation. Among other things, we are experimenting with connecting the application to a dedicated source code repository via ServiceNow's Source Control module, so that Claude Code can work with the application code locally before the changes are imported back into the instance.",
+                "project-badge-learning": "Learning outcomes",
+                "project-learning-p1": "The combination of the two projects gives us practical experience with key parts of ServiceNow development — including scoped applications, Studio, Source Control integration, and application architecture — while also building a broader understanding of how AI-assisted development tools can best be adopted in a structured development process. We consider this especially relevant experience, both because ServiceNow development is a directly transferable skill, and because the methodology we are documenting around AI-assisted development is a fast-moving area that is becoming increasingly relevant in the consulting industry."
             }
         };
 
@@ -119,15 +237,15 @@
 
                 // 1. If it's the first time running, save whatever original Norwegian is written in the HTML markup
                 if (!element.hasAttribute('data-original-no')) {
-                    element.setAttribute('data-original-no', element.textContent.trim());
+                    element.setAttribute('data-original-no', element.innerHTML.trim());
                 }
 
                 // 2. Route text values based on language choice
                 if (lang === 'en' && translations.en[key]) {
-                    element.textContent = translations.en[key];
+                    element.innerHTML = translations.en[key];
                 } else {
                     // Fall back cleanly to the original saved Norwegian text
-                    element.textContent = element.getAttribute('data-original-no');
+                    element.innerHTML = element.getAttribute('data-original-no');
                 }
             });
 
