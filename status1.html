@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status 1</title>
+    <link rel="stylesheet" href="site.css">
+
+    <style>
+        /* Container alignment for language switchers */
+        .controls {
+            display: inline-flex;
+            gap: 6px;
+            background-color: #f1f3f5;
+            padding: 4px;
+            border-radius: 30px; /* Outer rounded track */
+        }
+
+            /* Standard round button style rules */
+            .controls button {
+                background: transparent;
+                color: #495057;
+                border: none;
+                padding: 6px 14px;
+                font-size: 13px;
+                font-weight: 600;
+                font-family: inherit;
+                cursor: pointer;
+                border-radius: 20px; /* Pill-shaped round design */
+                transition: all 0.2s ease-in-out;
+            }
+
+                /* Hover animation properties */
+                .controls button:hover {
+                    color: #1a1a1a;
+                }
+
+                /* Active highlight status styling profile */
+                .controls button.active {
+                    background-color: #ffffff;
+                    color: #000000;
+                    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+                }
+    </style>
+</head>
+
+<body>
+
+    <nav class="top-menu">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-title">KPMG</span>
+                <span class="logo-sub" data-i18n="logo-sub">Praksisstudenter dagbok</span>
+            </a>
+
+            <!-- This will hide/show based on the site.css mobile setup -->
+            <div class="nav-links" id="navMenu">
+                <a href="index.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 5.5C4 4.67 4.67 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13Z" />
+                        <path d="M20 5.5c0-.83-.67-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z" />
+                    </svg>
+                    <span data-i18n="nav-dagbok">Dagbok</span>
+                </a>
+                <a href="projects.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 7a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Z" />
+                    </svg>
+                    <span data-i18n="nav-prosjekt">Prosjekter</span>
+                </a>
+                <a href="status1.html" class="active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="3" width="7" height="18" rx="1" />
+                        <rect x="13" y="8" width="7" height="13" rx="1" />
+                    </svg>
+                    <span data-i18n="nav-status1">Status 1</span>
+                </a>
+            </div>
+
+            <!-- Container for buttons -->
+            <div class="controls-wrapper" style="display: flex; align-items: center; gap: 10px;">
+                <!-- Styled Pill Container Switch -->
+                <div class="controls">
+                    <button id="btn-no" class="active" onclick="setLanguage('no')">Norsk</button>
+                    <button id="btn-en" onclick="setLanguage('en')">English</button>
+                </div>
+
+                <!-- Burger button sits beautifully on the side -->
+                <button class="burger-btn" id="burgerBtn" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+
+            <p class="sidebar-caption" data-i18n="sidebar-caption">KPMG praksis &middot; Høst 2026</p>
+        </div>
+    </nav>
+
+
+    <main class="container">
+
+        <header class="page-header">
+            <p class="eyebrow" data-i18n="header-eyebrow">Dokumentasjon</p>
+            <h1 data-i18n="header-title">Status 1 &middot; Om selskapet</h1>
+            <p class="page-note" data-i18n="header-note">
+                En oversikt over selskapet vi er praksisstudenter hos, sammen med våre daglige oppgaver og oppdraget vårt så langt i praksisperioden.
+            </p>
+        </header>
+
+        <section class="company-info">
+            <h2 class="section-heading" data-i18n="info-heading">Om selskapet</h2>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="info-label" data-i18n="info-name-label">Selskapsnavn</span>
+                    <span class="info-value">KPMG</span>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-label" data-i18n="info-size-label">Størrelse</span>
+                    <span class="info-value" data-i18n="info-size-value">Ca. 275 000+ ansatte i over 140 land</span>
+                    <p class="info-note" data-i18n="info-size-note">Tall for det globale KPMG-nettverket (KPMG International).</p>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-label" data-i18n="info-valuation-label">Verdivurdering</span>
+                    <span class="info-value" data-i18n="info-valuation-value">Ikke børsnotert</span>
+                    <p class="info-note" data-i18n="info-valuation-note">
+                        KPMG er et privateid partnerskap uten offentlig verdivurdering. Global omsetning lå på ca. 36 milliarder USD siste regnskapsår.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-label" data-i18n="info-specialty-label">Spesialitet</span>
+                    <span class="info-value" data-i18n="info-specialty-value">Revisjon, skatt og rådgivning</span>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-label" data-i18n="info-field-label">Bransje</span>
+                    <span class="info-value" data-i18n="info-field-value">Profesjonelle tjenester</span>
+                    <p class="info-note" data-i18n="info-field-note">Et av de fire største revisjons- og rådgivningsselskapene i verden ("Big Four").</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="company-gallery">
+            <h2 class="section-heading" data-i18n="gallery-heading">Bilder fra kontoret</h2>
+            <p class="section-intro" data-i18n="gallery-intro">
+                Fire bilder som viser kontoret og arbeidsmiljøet vårt hos KPMG legges til her.
+            </p>
+
+            <div class="gallery-grid">
+                <!-- Replace each placeholder with: <div class="gallery-item"><img src="img/xxx.jpg" alt="..."></div> -->
+                <div class="gallery-item" data-i18n="gallery-placeholder-1">Bilde 1</div>
+                <div class="gallery-item" data-i18n="gallery-placeholder-2">Bilde 2</div>
+                <div class="gallery-item" data-i18n="gallery-placeholder-3">Bilde 3</div>
+                <div class="gallery-item" data-i18n="gallery-placeholder-4">Bilde 4</div>
+            </div>
+        </section>
+
+        <section class="daily-tasks">
+            <h2 class="section-heading" data-i18n="tasks-heading">Våre daglige oppgaver</h2>
+            <p class="section-intro" data-i18n="tasks-intro">
+                Dette er oppgavene som har fylt hverdagen vår i praksisperioden så langt.
+            </p>
+
+            <ul class="task-list">
+                <li class="task-item">
+                    <span class="task-bullet"></span>
+                    <span class="task-text" data-i18n="task-1">Teste og evaluere Claude Code opp mot ulike arbeidsoppgaver i ServiceNow.</span>
+                </li>
+                <li class="task-item">
+                    <span class="task-bullet"></span>
+                    <span class="task-text" data-i18n="task-2">Utforske Now Assist og sammenligne resultatene med Claude Code.</span>
+                </li>
+                <li class="task-item">
+                    <span class="task-bullet"></span>
+                    <span class="task-text" data-i18n="task-3">Koble kildekode til en Personal Developer Instance (PDI) via Source Control.</span>
+                </li>
+                <li class="task-item">
+                    <span class="task-bullet"></span>
+                    <span class="task-text" data-i18n="task-4">Kjøre og dokumentere test-prompts på både norsk og engelsk.</span>
+                </li>
+                <li class="task-item">
+                    <span class="task-bullet"></span>
+                    <span class="task-text" data-i18n="task-5">Skrive dokumentasjon fortløpende i dagboken og i prosjekt-repoet på GitHub.</span>
+                </li>
+                <li class="task-item">
+                    <span class="task-bullet"></span>
+                    <span class="task-text" data-i18n="task-6">Delta i korte statusmøter for å avklare hindringer og planlegge neste steg.</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="mission">
+            <h2 class="section-heading" data-i18n="mission-heading">Vårt oppdrag</h2>
+
+            <div class="mission-box">
+                <p data-i18n="mission-p1">
+                    Målet vårt hos KPMG er å utforske og dokumentere hvordan AI-verktøyet Claude Code kan brukes i utviklingsprosessen på ServiceNow-plattformen. Vi undersøker dette langs fire akser: prompting-strategi, kontekststyring, arbeidsflyt og kvalitetskontroll.
+                </p>
+                <p data-i18n="mission-p2">
+                    Sluttproduktet skal være praktisk anvendelig veiledning som fremtidige utviklere kan bruke i lignende prosjekter, slik at oppsett av nye applikasjoner i ServiceNow blir raskere og bedre kvalitetssikret.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // JavaScript only needs the English data
+        const translations = {
+            en: {
+                "nav-dagbok": "Diary",
+                "nav-prosjekt": "Projects",
+                "nav-status1": "Status 1",
+                "logo-sub": "Intern diary",
+                "sidebar-caption": "KPMG internship &middot; Autumn 2026",
+                "header-eyebrow": "Documentation",
+                "header-title": "Status 1 &middot; About the Company",
+                "header-note": "An overview of the company we're interning at, along with our daily tasks and our mission so far during the internship.",
+                "info-heading": "About the company",
+                "info-name-label": "Company name",
+                "info-size-label": "Size",
+                "info-size-value": "Approx. 275,000+ employees in over 140 countries",
+                "info-size-note": "Figures for the global KPMG network (KPMG International).",
+                "info-valuation-label": "Valuation",
+                "info-valuation-value": "Not publicly traded",
+                "info-valuation-note": "KPMG is a privately owned partnership with no public valuation. Global revenue was approximately USD 36 billion in the latest fiscal year.",
+                "info-specialty-label": "Specialty",
+                "info-specialty-value": "Audit, tax and advisory",
+                "info-field-label": "Field",
+                "info-field-value": "Professional services",
+                "info-field-note": "One of the four largest audit and advisory firms in the world (the \"Big Four\").",
+                "gallery-heading": "Photos from the office",
+                "gallery-intro": "Four photos showing our office and working environment at KPMG will be added here.",
+                "gallery-placeholder-1": "Photo 1",
+                "gallery-placeholder-2": "Photo 2",
+                "gallery-placeholder-3": "Photo 3",
+                "gallery-placeholder-4": "Photo 4",
+                "tasks-heading": "Our daily tasks",
+                "tasks-intro": "These are the tasks that have filled our days during the internship so far.",
+                "task-1": "Testing and evaluating Claude Code against different tasks in ServiceNow.",
+                "task-2": "Exploring Now Assist and comparing the results with Claude Code.",
+                "task-3": "Connecting source code to a Personal Developer Instance (PDI) via Source Control.",
+                "task-4": "Running and documenting test prompts in both Norwegian and English.",
+                "task-5": "Writing documentation continuously in the diary and the project repository on GitHub.",
+                "task-6": "Taking part in short status meetings to resolve obstacles and plan next steps.",
+                "mission-heading": "Our mission",
+                "mission-p1": "Our goal at KPMG is to explore and document how the AI tool Claude Code can be used in the development process on the ServiceNow platform. We investigate this along four axes: prompting strategy, context management, workflow, and quality control.",
+                "mission-p2": "The end result should be practically applicable guidance that future developers can use in similar projects, so that setting up new applications in ServiceNow becomes faster and better quality-assured."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-i18n]');
+
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+
+                // 1. If it's the first time running, save whatever original Norwegian is written in the HTML markup
+                if (!element.hasAttribute('data-original-no')) {
+                    element.setAttribute('data-original-no', element.innerHTML.trim());
+                }
+
+                // 2. Route text values based on language choice
+                if (lang === 'en' && translations.en[key]) {
+                    element.innerHTML = translations.en[key];
+                } else {
+                    // Fall back cleanly to the original saved Norwegian text
+                    element.innerHTML = element.getAttribute('data-original-no');
+                }
+            });
+
+            document.getElementById('btn-no').classList.toggle('active', lang === 'no');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+            localStorage.setItem('diaryLanguage', lang);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('diaryLanguage') || 'no';
+            setLanguage(savedLang);
+        });
+
+        // DOM Interaction logic for Mobile Burger actions
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('diaryLanguage') || 'no';
+            setLanguage(savedLang);
+
+            const burgerBtn = document.getElementById('burgerBtn');
+            const navMenu = document.getElementById('navMenu');
+            const menuLinks = document.querySelectorAll('.nav-links a');
+
+            if (burgerBtn && navMenu) {
+                // Toggle view configurations when clicked
+                burgerBtn.addEventListener('click', () => {
+                    burgerBtn.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                // Automatically fold up menu when hitting internal links
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        burgerBtn.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
