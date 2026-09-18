@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status 1</title>
+    <link rel="stylesheet" href="site.css">
+
+    <style>
+        /* Container alignment for language switchers */
+        .controls {
+            display: inline-flex;
+            gap: 6px;
+            background-color: #f1f3f5;
+            padding: 4px;
+            border-radius: 30px; /* Outer rounded track */
+        }
+
+            /* Standard round button style rules */
+            .controls button {
+                background: transparent;
+                color: #495057;
+                border: none;
+                padding: 6px 14px;
+                font-size: 13px;
+                font-weight: 600;
+                font-family: inherit;
+                cursor: pointer;
+                border-radius: 20px; /* Pill-shaped round design */
+                transition: all 0.2s ease-in-out;
+            }
+
+                /* Hover animation properties */
+                .controls button:hover {
+                    color: #1a1a1a;
+                }
+
+                /* Active highlight status styling profile */
+                .controls button.active {
+                    background-color: #ffffff;
+                    color: #000000;
+                    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+                }
+
+        /* Small source list at the bottom of the page */
+        .sources {
+            margin-top: 30px;
+            padding-top: 18px;
+            border-top: 1px solid var(--card-border);
+            color: #9aa1ab;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+            .sources a {
+                color: #9aa1ab;
+            }
+    </style>
+</head>
+
+<body>
+
+    <nav class="top-menu">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-title">KPMG</span>
+                <span class="logo-sub" data-i18n="logo-sub">Praksisstudenter dagbok</span>
+            </a>
+
+            <!-- This will hide/show based on the site.css mobile setup -->
+            <div class="nav-links" id="navMenu">
+                <a href="index.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 5.5C4 4.67 4.67 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13Z" />
+                        <path d="M20 5.5c0-.83-.67-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z" />
+                    </svg>
+                    <span data-i18n="nav-dagbok">Dagbok</span>
+                </a>
+                <a href="projects.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 7a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Z" />
+                    </svg>
+                    <span data-i18n="nav-prosjekt">Prosjekter</span>
+                </a>
+                <a href="status1.html" class="active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 17V9M15 17v-4M12 17V5M4 19h16" />
+                    </svg>
+                    <span data-i18n="nav-status1">Status 1</span>
+                </a>
+            </div>
+
+            <!-- Container for buttons -->
+            <div class="controls-wrapper" style="display: flex; align-items: center; gap: 10px;">
+                <!-- Styled Pill Container Switch -->
+                <div class="controls">
+                    <button id="btn-no" class="active" onclick="setLanguage('no')">Norsk</button>
+                    <button id="btn-en" onclick="setLanguage('en')">English</button>
+                </div>
+
+                <!-- Burger button sits beautifully on the side -->
+                <button class="burger-btn" id="burgerBtn" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+
+            <p class="sidebar-caption" data-i18n="sidebar-caption">KPMG praksis &middot; Høst 2026</p>
+        </div>
+    </nav>
+
+
+    <main class="container">
+
+        <header class="page-header">
+            <p class="eyebrow" data-i18n="header-eyebrow">Dokumentasjon</p>
+            <h1 data-i18n="header-title">Status 1</h1>
+            <p class="page-note" data-i18n="header-note">
+                En oppsummering av bedriften basert på det vi har erfart i praksisen så langt, uke 34&ndash;37.
+            </p>
+        </header>
+
+        <section class="stat-grid">
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M3 12h18M12 3c2.5 2.6 4 5.9 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.9-4-9s1.5-6.4 4-9Z" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value">155</span>
+                    <span class="stat-label" data-i18n="stat-countries-label">Land globalt</span>
+                </span>
+            </div>
+
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="8" r="3" />
+                        <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" />
+                        <circle cx="17" cy="9" r="2.5" />
+                        <path d="M15.5 14.2c2.6.5 4.5 2.7 4.5 5.3" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value" data-i18n="stat-global-employees-value">275 000+</span>
+                    <span class="stat-label" data-i18n="stat-global-employees-label">Ansatte globalt</span>
+                </span>
+            </div>
+
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="8" height="8" rx="1.5" />
+                        <rect x="13" y="3" width="8" height="8" rx="1.5" />
+                        <rect x="3" y="13" width="8" height="8" rx="1.5" />
+                        <rect x="13" y="13" width="8" height="8" rx="1.5" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value" data-i18n="stat-global-revenue-value">38,4 mrd. USD</span>
+                    <span class="stat-label" data-i18n="stat-global-revenue-label">Global omsetning 2024</span>
+                </span>
+            </div>
+
+            <div class="stat-tile">
+                <span class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 21V9l8-5 8 5v12" />
+                        <path d="M9 21v-6h6v6" />
+                    </svg>
+                </span>
+                <span class="stat-text">
+                    <span class="stat-value" data-i18n="stat-norway-employees-value">1850+</span>
+                    <span class="stat-label" data-i18n="stat-norway-employees-label">Ansatte i Norge</span>
+                </span>
+            </div>
+        </section>
+
+        <section class="projects">
+
+            <h2 class="projects-heading" data-i18n="status-heading">Om bedriften &ndash; status etter uke 37</h2>
+            <p class="projects-intro" data-i18n="status-intro">
+                Basert på det vi har erfart i praksisen hos KPMG så langt, og litt research på nett, oppsummerer vi her hva slags bedrift dette er, hvor store de er, hva vi konkret har jobbet med, og hva som har stått ut underveis.
+            </p>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-name" data-i18n="status-badge-industry">Bransje</span>
+                    <h3 class="project-title" data-i18n="status-industry-title">Hva slags bedrift er KPMG?</h3>
+                </div>
+                <p data-i18n="status-industry-p1">
+                    KPMG er et av verdens fire største revisjons- og rådgivningsselskaper, den såkalte &laquo;Big Four&raquo; sammen med Deloitte, EY og PwC. I Norge er KPMG et tverrfaglig kompetansehus som leverer tjenester innen revisjon, skatt og avgift, forretningsjus, rådgivning (Advisory) og bærekraft, og betjener kunder i mange ulike bransjer &ndash; blant annet bank/finans, energi, helse og offentlig sektor &ndash; med fagmiljøer tilpasset regelverket i hver bransje.
+                </p>
+                <p data-i18n="status-industry-p2">
+                    Et særtrekk ved vår praksisplass er at vi jobber i skjæringspunktet mellom konsulentbransjen og teknologi: vi utforsker hvordan KPMG kan ta i bruk AI-verktøy som Claude Code i utviklingsarbeid på ServiceNow-plattformen. Det viser at selskapet satser aktivt på ny teknologi og intern innovasjon, ikke bare på tradisjonelle revisjons- og rådgivningstjenester.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-name" data-i18n="status-badge-size">Størrelse</span>
+                    <h3 class="project-title" data-i18n="status-size-title">Størrelse og omsetning</h3>
+                </div>
+                <p data-i18n="status-size-p1">
+                    Globalt opererer KPMG i rundt 155 land med over 275 000 ansatte, og hadde en global omsetning på 38,4 milliarder dollar i regnskapsåret 2024 &ndash; en vekst på 5,4 %, som var den høyeste veksten blant Big Four-selskapene det året. KPMG er likevel det minste av de fire store målt i både omsetning og antall ansatte.
+                </p>
+                <p data-i18n="status-size-p2">
+                    I Norge har KPMG mer enn 1850 ansatte fordelt på over 20 kontorer landet rundt, blant annet i Oslo, Bergen, Stavanger, Trondheim og Drammen. Inntektene økte med rundt 500 millioner kroner (18 %) fra 2023 til 2024. Advisory-avdelingen, der vår praksis hører hjemme, har vokst til nesten 700 medarbeidere og er nå KPMGs største forretningsområde i Norge målt i omsetning.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-name" data-i18n="status-badge-tasks">Arbeidsoppgaver</span>
+                    <h3 class="project-title" data-i18n="status-tasks-title">Dine arbeidsoppgaver</h3>
+                </div>
+                <p data-i18n="status-tasks-p1">
+                    Praksisen startet med onboarding og sertifiseringskurs i ServiceNow, samt oppsett av verktøy som Claude-brukere og en egen PDI-instans. Deretter gikk vi over til å teste og evaluere AI-verktøy &ndash; Claude Code og Now Assist &ndash; opp mot ServiceNow-utvikling, og å utforske metoder for å koble Claude Code til en ServiceNow-instans via Studio og Source Control, slik at kode kan utvikles lokalt og importeres tilbake til plattformen.
+                </p>
+                <p data-i18n="status-tasks-p2">
+                    Videre logger vi eksperimentene systematisk (prompt, kontekst, resultat og manuelle korreksjoner) i et eget dokumentasjons-repo, og bygger en støtteapplikasjon for ressursallokering i ServiceNow som testmiljø for metodikken. I tillegg skriver vi en ukentlig dagbok, som vi bytter på å føre, og dokumenterer arbeidet løpende på GitHub.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-name" data-i18n="status-badge-highlights">Utfordringer &amp; høydepunkter</span>
+                    <h3 class="project-title" data-i18n="status-highlights-title">Spesielle utfordringer og spennende ting</h3>
+                </div>
+                <p data-i18n="status-highlights-p1">
+                    Av utfordringer har vi blant annet møtt nettverksproblemer på kontoret som satte oss tilbake en hel dag, og det generelle at &laquo;veien blir til mens man går&raquo; &ndash; det finnes ingen ferdig oppskrift for å bruke Claude Code sammen med ServiceNow, så vi må selv definere metodikk og beste praksis underveis.
+                </p>
+                <p data-i18n="status-highlights-p2">
+                    Det mest spennende er å være tidlig ute med å utforske et raskt voksende felt &ndash; AI-assistert utvikling &ndash; i en konsulentbransje der dette blir stadig mer relevant, og at funnene våre skal brukes praktisk til å avgjøre hvordan fremtidige ServiceNow-prosjekter bygges i KPMG. Vi fikk også et lite innblikk i bedriftskulturen da hele kontoret samlet seg i lobbyen for å markere kong Haralds begravelse &ndash; en påminnelse om fellesskapet på arbeidsplassen utenom selve arbeidsoppgavene.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-name" data-i18n="status-badge-other">Annet</span>
+                </div>
+                <p data-i18n="status-other-p1">
+                    Faste kontordager er avtalt til 1&ndash;2 dager i uken, der onsdag og torsdag passer best, med fleksibilitet for hjemmekontor ved behov. Vi er to praksisstudenter, Einar og jeg, og deler oppgaver og ansvar mellom oss med jevnlig avstemming om fremdrift. Praksisperioden er høsten 2026, og status per nå (uke 37) er 7 loggførte dager.
+                </p>
+            </article>
+
+        </section>
+
+        <p class="sources" data-i18n="status-sources">
+            Kilder: <a href="https://www.cpapracticeadvisor.com/2025/01/10/kpmg-closed-out-2024-with-global-revenue-of-38-4-billion/154278/" target="_blank" rel="noopener">CPA Practice Advisor</a>,
+            <a href="https://www.statista.com/statistics/484041/number-of-employees-of-kpmg/" target="_blank" rel="noopener">Statista</a>,
+            <a href="https://www.finansavisen.no/revisjon-og-radgivning/2024/05/26/8134855/kpmg-fusjonerer-med-kpmg" target="_blank" rel="noopener">Finansavisen</a>, egne ukelogger og prosjekter-siden.
+        </p>
+
+    </main>
+
+    <script>
+        // JavaScript only needs the English data
+        const translations = {
+            en: {
+                "nav-dagbok": "Diary",
+                "nav-prosjekt": "Projects",
+                "nav-status1": "Status 1",
+                "logo-sub": "Intern diary",
+                "sidebar-caption": "KPMG internship &middot; Autumn 2026",
+                "header-eyebrow": "Documentation",
+                "header-title": "Status 1",
+                "header-note": "A summary of the company based on what we've learned during our internship so far, weeks 34&ndash;37.",
+                "stat-countries-label": "Countries worldwide",
+                "stat-global-employees-value": "275,000+",
+                "stat-global-employees-label": "Employees worldwide",
+                "stat-global-revenue-value": "$38.4bn",
+                "stat-global-revenue-label": "Global revenue 2024",
+                "stat-norway-employees-value": "1,850+",
+                "stat-norway-employees-label": "Employees in Norway",
+                "status-heading": "About the company &ndash; status after week 37",
+                "status-intro": "Based on what we've experienced during our internship at KPMG so far, and a bit of research online, we summarize here what kind of company this is, how big it is, what we've concretely worked on, and what has stood out along the way.",
+                "status-badge-industry": "Industry",
+                "status-industry-title": "What kind of company is KPMG?",
+                "status-industry-p1": "KPMG is one of the world's four largest audit and advisory firms, the so-called &laquo;Big Four&raquo; alongside Deloitte, EY and PwC. In Norway, KPMG is a cross-disciplinary firm delivering services within audit, tax and duties, business law, advisory, and sustainability, serving clients across many industries &ndash; including banking/finance, energy, health, and the public sector &ndash; with teams tailored to the regulations of each industry.",
+                "status-industry-p2": "A distinguishing feature of our internship is that we work at the intersection of the consulting industry and technology: we're exploring how KPMG can adopt AI tools such as Claude Code in development work on the ServiceNow platform. This shows that the company actively invests in new technology and internal innovation, not just traditional audit and advisory services.",
+                "status-badge-size": "Size",
+                "status-size-title": "Size and revenue",
+                "status-size-p1": "Globally, KPMG operates in around 155 countries with more than 275,000 employees, and reported global revenue of $38.4 billion in fiscal year 2024 &ndash; a 5.4% increase, the highest growth among the Big Four firms that year. KPMG is nevertheless the smallest of the Big Four measured by both revenue and headcount.",
+                "status-size-p2": "In Norway, KPMG has more than 1,850 employees across more than 20 offices nationwide, including Oslo, Bergen, Stavanger, Trondheim and Drammen. Revenue grew by around 500 million NOK (18%) from 2023 to 2024. The Advisory division, where our internship is based, has grown to almost 700 employees and is now KPMG's largest business area in Norway by revenue.",
+                "status-badge-tasks": "Tasks",
+                "status-tasks-title": "Your tasks",
+                "status-tasks-p1": "The internship started with onboarding and certification courses in ServiceNow, along with setting up tools such as Claude accounts and a dedicated PDI instance. We then moved on to testing and evaluating AI tools &ndash; Claude Code and Now Assist &ndash; for ServiceNow development, and exploring ways to bridge Claude Code with a ServiceNow instance via Studio and Source Control, so code can be developed locally and imported back into the platform.",
+                "status-tasks-p2": "We also systematically log our experiments (prompt used, context available, outcome, and manual corrections needed) in a dedicated documentation repository, and we're building a resource allocation support application in ServiceNow as a test environment for the methodology. In addition, we write a weekly diary, alternating who keeps it, and document our work continuously on GitHub.",
+                "status-badge-highlights": "Challenges &amp; highlights",
+                "status-highlights-title": "Special challenges and exciting things",
+                "status-highlights-p1": "Among the challenges, we've run into network issues at the office that set us back a full day, and the general fact that &laquo;the road is made by walking&raquo; &ndash; there's no ready-made recipe for using Claude Code together with ServiceNow, so we have to define the methodology and best practices ourselves along the way.",
+                "status-highlights-p2": "The most exciting part is being early to explore a fast-growing field &ndash; AI-assisted development &ndash; in a consulting industry where this is becoming increasingly relevant, and knowing our findings will be used practically to decide how future ServiceNow projects are built at KPMG. We also got a glimpse of the company culture when the whole office gathered in the lobby to mark King Harald's funeral &ndash; a reminder of the sense of community at the workplace beyond the tasks themselves.",
+                "status-badge-other": "Other",
+                "status-other-p1": "Agreed office days are 1&ndash;2 days per week, with Wednesdays and Thursdays working best, with flexibility for home office when needed. We are two interns, Einar and I, and we split tasks and responsibilities between us with regular check-ins on progress. The internship period is autumn 2026, and as of now (week 37) we have 7 logged days.",
+                "status-sources": "Sources: <a href=\"https://www.cpapracticeadvisor.com/2025/01/10/kpmg-closed-out-2024-with-global-revenue-of-38-4-billion/154278/\" target=\"_blank\" rel=\"noopener\">CPA Practice Advisor</a>, <a href=\"https://www.statista.com/statistics/484041/number-of-employees-of-kpmg/\" target=\"_blank\" rel=\"noopener\">Statista</a>, <a href=\"https://www.finansavisen.no/revisjon-og-radgivning/2024/05/26/8134855/kpmg-fusjonerer-med-kpmg\" target=\"_blank\" rel=\"noopener\">Finansavisen</a>, our own weekly diaries and the projects page."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-i18n]');
+
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+
+                // 1. If it's the first time running, save whatever original Norwegian is written in the HTML markup
+                if (!element.hasAttribute('data-original-no')) {
+                    element.setAttribute('data-original-no', element.innerHTML.trim());
+                }
+
+                // 2. Route text values based on language choice
+                if (lang === 'en' && translations.en[key]) {
+                    element.innerHTML = translations.en[key];
+                } else {
+                    // Fall back cleanly to the original saved Norwegian text
+                    element.innerHTML = element.getAttribute('data-original-no');
+                }
+            });
+
+            document.getElementById('btn-no').classList.toggle('active', lang === 'no');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+            localStorage.setItem('diaryLanguage', lang);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('diaryLanguage') || 'no';
+            setLanguage(savedLang);
+        });
+
+        // DOM Interaction logic for Mobile Burger actions
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('diaryLanguage') || 'no';
+            setLanguage(savedLang);
+
+            const burgerBtn = document.getElementById('burgerBtn');
+            const navMenu = document.getElementById('navMenu');
+            const menuLinks = document.querySelectorAll('.nav-links a');
+
+            if (burgerBtn && navMenu) {
+                // Toggle view configurations when clicked
+                burgerBtn.addEventListener('click', () => {
+                    burgerBtn.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                // Automatically fold up menu when hitting internal links
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        burgerBtn.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
