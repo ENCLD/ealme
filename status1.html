@@ -243,16 +243,16 @@
                     Faste kontordager er avtalt til 1 til 2 dager i uken, der onsdag og torsdag passer best, med fleksibilitet for hjemmekontor ved behov. Vi er to praksisstudenter, Einar og jeg, og deler oppgaver og ansvar mellom oss med jevnlig avstemming om fremdrift. Praksisperioden er høsten 2026, og status per nå (uke 38) er 8 loggførte dager.
                 </p>
             </article>
-            
+
             <section class="company-gallery">
                 <h2 class="section-heading" data-i18n="gallery-heading">Bilder fra kontoret</h2>
 
                 <div class="gallery-grid">
                     <!-- Replace each placeholder with: <div class="gallery-item"><img src="img/xxx.jpg" alt="..."></div> -->
-                    <div class="gallery-item"><img src="img/meet1.jpg" alt="meeting"></div>
-                    <div class="gallery-item"><img src="img/meet2.jpg" alt="meeting"></div>
-                    <div class="gallery-item"><img src="img/office1.jpg" alt="office"></div>
-                    <div class="gallery-item"><img src="img/first_day.jpg" alt="office"></div>
+                    <div class="gallery-item"><img src="img/meet1.jpg"  alt="Sample Photo"></div>
+                    <div class="gallery-item"><img src="img/meet2.jpg"  alt="Sample Photo"></div>
+                    <div class="gallery-item"><img src="img/office1.jpg"  alt="Sample Photo"></div>
+                    <div class="gallery-item"><img src="img/first_day.jpg"  alt="Sample Photo"></div>
                 </div>
             </section>
         </section>
@@ -262,9 +262,11 @@
             <a href="https://www.statista.com/statistics/484041/number-of-employees-of-kpmg/" target="_blank" rel="noopener">Statista</a>,
             <a href="https://www.finansavisen.no/revisjon-og-radgivning/2024/05/26/8134855/kpmg-fusjonerer-med-kpmg" target="_blank" rel="noopener">Finansavisen</a>, egne ukelogger og prosjekter-siden.
         </p>
-
+        
     </main>
 
+    
+    
     <script>
         // JavaScript only needs the English data
         const translations = {
@@ -365,6 +367,13 @@
                     });
                 });
             }
+        });
+        const images = document.querySelectorAll(".gallery-item");
+
+        images.forEach(function (img) {
+            img.addEventListener("click", function () {
+                img.classList.toggle("zoomed");
+            });
         });
     </script>
 </body>
