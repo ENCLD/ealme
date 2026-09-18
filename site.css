@@ -355,6 +355,19 @@ h1 {
    Photo gallery
    ============================== */
 
+.project-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    will-change: transform;
+}
+    .project-image:hover {
+        transform: scale(1.02) translateY(-4px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -546,6 +559,15 @@ h1 {
         padding: 20px 20px 20px 26px;
     }
 
+        .project-card img {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 20px auto 0;
+            border-radius: 12px;
+        }
+
     .stat-grid {
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
@@ -615,4 +637,18 @@ h1 {
     body {
         padding-left: var(--sidebar-width);
     }
+    
+    .project-card {
+        overflow: hidden;
+    }
+
+        .project-card img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            margin: 20px 0 0 0;
+            border-radius: 12px;
+        }
 }
