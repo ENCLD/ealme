@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status 2</title>
+    <link rel="stylesheet" href="site.css">
+
+    <style>
+        /* Container alignment for language switchers */
+        .controls {
+            display: inline-flex;
+            gap: 6px;
+            background-color: #f1f3f5;
+            padding: 4px;
+            border-radius: 30px; /* Outer rounded track */
+        }
+
+            /* Standard round button style rules */
+            .controls button {
+                background: transparent;
+                color: #495057;
+                border: none;
+                padding: 6px 14px;
+                font-size: 13px;
+                font-weight: 600;
+                font-family: inherit;
+                cursor: pointer;
+                border-radius: 20px; /* Pill-shaped round design */
+                transition: all 0.2s ease-in-out;
+            }
+
+                /* Hover animation properties */
+                .controls button:hover {
+                    color: #1a1a1a;
+                }
+
+                /* Active highlight status styling profile */
+                .controls button.active {
+                    background-color: #ffffff;
+                    color: #000000;
+                    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+                }
+
+        /* Video block: keeps a fixed 16:9 frame even before the file is added */
+        .video-section {
+            margin-top: 40px;
+        }
+
+        .video-frame {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #f1f3f5;
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+            .video-frame video {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                background: #f1f3f5;
+            }
+
+        .video-caption {
+            margin-top: 10px;
+            color: #6b7280;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="top-menu">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-title">KPMG</span>
+                <span class="logo-sub" data-i18n="logo-sub">Praksisstudenter dagbok</span>
+            </a>
+
+            <!-- This will hide/show based on the site.css mobile setup -->
+            <div class="nav-links" id="navMenu">
+                <a href="index.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 5.5C4 4.67 4.67 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13Z" />
+                        <path d="M20 5.5c0-.83-.67-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z" />
+                    </svg>
+                    <span data-i18n="nav-dagbok">Dagbok</span>
+                </a>
+                <a href="projects.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 7a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Z" />
+                    </svg>
+                    <span data-i18n="nav-prosjekt">Prosjekter</span>
+                </a>
+                <a href="status1.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 17V9M15 17v-4M12 17V5M4 19h16" />
+                    </svg>
+                    <span data-i18n="nav-status1">Status 1</span>
+                </a>
+                <a href="status2.html" class="active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 17V9M15 17v-4M12 17V5M4 19h16" />
+                    </svg>
+                    <span data-i18n="nav-status2">Status 2</span>
+                </a>
+            </div>
+
+            <!-- Container for buttons -->
+            <div class="controls-wrapper" style="display: flex; align-items: center; gap: 10px;">
+                <!-- Styled Pill Container Switch -->
+                <div class="controls">
+                    <button id="btn-no" class="active" onclick="setLanguage('no')">Norsk</button>
+                    <button id="btn-en" onclick="setLanguage('en')">English</button>
+                </div>
+
+                <!-- Burger button sits beautifully on the side -->
+                <button class="burger-btn" id="burgerBtn" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+
+            <p class="sidebar-caption" data-i18n="sidebar-caption">KPMG praksis &middot; Høst 2026</p>
+        </div>
+    </nav>
+
+
+    <main class="container">
+
+        <header class="page-header">
+            <p class="eyebrow" data-i18n="header-eyebrow">Dokumentasjon</p>
+            <h1 data-i18n="header-title">Status 2</h1>
+            <p class="page-note" data-i18n="header-note">
+                En oppdatering på hva som har endret seg siden status 1, og hvor prosjektet står nå.
+            </p>
+        </header>
+
+        <section class="projects">
+
+            <h2 class="projects-heading" data-i18n="status-heading">Status etter uke 41</h2>
+            <p class="projects-intro" data-i18n="status-intro">
+                Vi er nå godt i gang med prosjektet og har mange mulige ressursallokerings eksempler. Det er nå også lagt til mer informasjon om oppstart med Claude. 
+            </p>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-name" data-i18n="status-badge-changes">Endringer</span>
+                    <h3 class="project-title" data-i18n="status-changes-title">Hva har endret seg siden status 1?</h3>
+                </div>
+                <p data-i18n="status-changes-p1">
+                  Vi har en mye bedre forståelse for hvordan de ulike delene i ServiceNow henger sammen og hvordan vi må ta hensyn til ulike begrensninger. Det er mange måter å vise informasjon på, men vi må gjøre et valg for å begrense vårt "scope". Til nå ser det best ut å bruke komponenter siden det ikke er "depreciated" og lettere å satte sammen etterpå. Det tidligere pages systemet brukte AngularJS som er utdatert og ikke lenger støttet.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-name" data-i18n="status-badge-current">Nåsituasjon</span>
+                    <h3 class="project-title" data-i18n="status-current-title">Hvor står prosjektet nå?</h3>
+                </div>
+                <p data-i18n="status-current-p1">
+                  Det er snart mulig å følge deler av oppskriften nå, så vi ønsker å teste med en faktisk bruker neste uke. Da vil vi se hvilken dokumentasjon og veiledning som mangler for å bruke Claude eller KI på en så god måte som mulig. Utfordringer vi allerede ser er hvordan man kan få Claude til å forstå nok, uten at man må dele hele prosjektet. Det kan ofte bli mye venting på at Claude skal svare, så vi må vudere hvordan man kan få ned tiden eller bruke tiden til noe annet mens man venter. 
+                </p>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-name" data-i18n="status-badge-next">Videre</span>
+                    <h3 class="project-title" data-i18n="status-next-title">Veien videre</h3>
+                </div>
+                <p data-i18n="status-next-p1">
+                   Når vi i neste uke får testet mer av oppsettet med faktiske brukere vil vi videreutvikle dokumentasjon og passe på at hull tettes. Det blir etterhvert også viktig å vurdere områdene der KI er best i bruk. Vi hadde nylig et møte om Lux som er et rammeverk spesielt utviklet for KI i ServiceNow.
+                </p>
+            </article>
+
+            <section class="video-section">
+                <h2 class="section-heading" data-i18n="video-heading">KI-bruk</h2>
+
+                <div class="video-frame">
+                    <!-- Legg videofilen i img/ og bytt ut filnavnet under -->
+                    <video controls preload="metadata" poster="">
+                        <source src="img/intervju_fixed.mp4" type="video/mp4">
+                        <span data-i18n="video-fallback">Nettleseren din støtter ikke avspilling av video.</span>
+                    </video>
+                </div>
+
+                <p class="video-caption" data-i18n="video-caption">
+                    I videoen over kan du se et intervju med et par av KPMG sine ansatte angående KI.
+                </p>
+            </section>
+
+        </section>
+
+    </main>
+
+
+
+    <script>
+        // JavaScript only needs the English data
+        const translations = {
+            en: {
+                "nav-dagbok": "Diary",
+                "nav-prosjekt": "Projects",
+                "nav-status1": "Status 1",
+                "nav-status2": "Status 2",
+                "logo-sub": "Intern diary",
+                "sidebar-caption": "KPMG internship &middot; Autumn 2026",
+                "header-eyebrow": "Documentation",
+                "header-title": "Status 2",
+                "header-note": "An update on what has changed since status 1, and where the project stands now.",
+                "status-heading": "Status after week 41",
+                "status-intro": "We are now well under way with the project and have plenty of possible resource allocation examples. We have also added more information about getting started with Claude.",
+                "status-badge-changes": "Changes",
+                "status-changes-title": "What has changed since status 1?",
+                "status-changes-p1": "We have a much better understanding of how the different parts of ServiceNow fit together, and of the various limitations we have to work around. There are many ways to present information, but we have to make a choice in order to narrow our scope. So far, using components looks like the best option, since they are not deprecated and are easier to assemble afterwards. The earlier pages system used AngularJS, which is outdated and no longer supported.",
+                "status-badge-current": "Current state",
+                "status-current-title": "Where is the project now?",
+                "status-current-p1": "It will soon be possible to follow parts of the recipe, so we want to test it with an actual user next week. That will show us which documentation and guidance is missing in order to use Claude or AI as effectively as possible. Challenges we can already see are how to give Claude enough understanding without having to share the entire project. There can often be a lot of waiting for Claude to respond, so we have to consider how to bring that time down, or how to use the waiting time for something else.",
+                "status-badge-next": "Next",
+                "status-next-title": "The road ahead",
+                "status-next-p1": "Once we have tested more of the setup with actual users next week, we will develop the documentation further and make sure the gaps are closed. In time it will also be important to assess the areas where AI is best put to use. We recently had a meeting about Lux, a framework developed specifically for AI in ServiceNow.",
+                "video-heading": "AI in use",
+                "video-caption": "In the video above you can see an interview with a couple of KPMG's employees about AI.",
+                "video-fallback": "Your browser does not support video playback."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-i18n]');
+
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+
+                // 1. If it's the first time running, save whatever original Norwegian is written in the HTML markup
+                if (!element.hasAttribute('data-original-no')) {
+                    element.setAttribute('data-original-no', element.innerHTML.trim());
+                }
+
+                // 2. Route text values based on language choice
+                if (lang === 'en' && translations.en[key]) {
+                    element.innerHTML = translations.en[key];
+                } else {
+                    // Fall back cleanly to the original saved Norwegian text
+                    element.innerHTML = element.getAttribute('data-original-no');
+                }
+            });
+
+            document.getElementById('btn-no').classList.toggle('active', lang === 'no');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+            localStorage.setItem('diaryLanguage', lang);
+        }
+
+        // DOM Interaction logic for Mobile Burger actions
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('diaryLanguage') || 'no';
+            setLanguage(savedLang);
+
+            const burgerBtn = document.getElementById('burgerBtn');
+            const navMenu = document.getElementById('navMenu');
+            const menuLinks = document.querySelectorAll('.nav-links a');
+
+            if (burgerBtn && navMenu) {
+                // Toggle view configurations when clicked
+                burgerBtn.addEventListener('click', () => {
+                    burgerBtn.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                // Automatically fold up menu when hitting internal links
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        burgerBtn.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
