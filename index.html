@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dagbok</title>
-    <link rel="stylesheet" href="site.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css?v=3">
 
     <style>
         /* Container alignment for language switchers */
@@ -105,12 +108,36 @@
 
     <main class="container">
 
-        <header class="page-header">
-            <p class="eyebrow" data-i18n="header-eyebrow">Dokumentasjon</p>
-            <h1 data-i18n="header-title">Dagbok</h1>
-            <p class="page-note" data-i18n="header-note">
-                Avtalte kontordager er 1–2 dager i uken. De mest passende dagene er onsdager og torsdager.
-            </p>
+        <header class="page-header hero">
+            <div class="hero-text">
+                <p class="eyebrow" data-i18n="header-eyebrow">Dokumentasjon</p>
+                <h1 data-i18n="header-title">Dagbok</h1>
+                <p class="hero-names hand">Hamdi <span class="amp">&amp;</span> Einar</p>
+                <p class="page-note" data-i18n="header-note">
+                    Avtalte kontordager er 1–2 dager i uken. De mest passende dagene er onsdager og torsdager.
+                </p>
+                <div class="hero-chips">
+                    <span class="chip">📍 Kristiansand</span>
+                    <span class="chip">🤖 Claude Code</span>
+                    <span class="chip">⚙️ ServiceNow</span>
+                </div>
+            </div>
+
+            <div class="polaroid-stack" aria-label="Bilder av Hamdi og Einar">
+                <figure class="polaroid">
+                    <img src="img/moments/img_1852.jpg" alt="Hamdi og veileder på kontoret">
+                    <figcaption data-i18n="pol-1">Te med veilederen ☕</figcaption>
+                </figure>
+                <figure class="polaroid">
+                    <img src="img/moments/img_2096.jpg" alt="Einar og Hamdi tar selfie på kontoret">
+                    <figcaption data-i18n="pol-2">Kontor-selfie</figcaption>
+                </figure>
+                <figure class="polaroid">
+                    <span class="tape"></span>
+                    <img src="img/moments/img_1571.jpg" alt="Hamdi og Einar med tommel opp">
+                    <figcaption data-i18n="pol-3">Dag 3 – klare for innsats! 👍</figcaption>
+                </figure>
+            </div>
         </header>
 
         <section class="stat-grid">
@@ -170,6 +197,124 @@
             </div>
         </section>
 
+        <section class="team reveal">
+            <div class="section-head">
+                <h2 data-i18n="team-heading">Møt teamet</h2>
+                <span class="hand" data-i18n="team-hand">to studenter, én dagbok</span>
+            </div>
+
+            <div class="team-grid">
+                <article class="team-card">
+                    <div class="avatar">
+                        <img src="img/moments/avatar_hamdi.jpg" alt="Hamdi">
+                        <span class="wave">👋</span>
+                    </div>
+                    <div>
+                        <h3>Hamdi</h3>
+                        <p class="team-role" data-i18n="hamdi-role">Brobygger</p>
+                        <p data-i18n="hamdi-text">Utforsker hvordan Claude Code kan kobles til instansen i ServiceNow Studio – og noterer alle sidesporene underveis.</p>
+                        <div class="team-tags">
+                            <span>Claude Code</span>
+                            <span>ServiceNow SDK</span>
+                            <span>Studio</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="avatar">
+                        <img src="img/moments/avatar_einar.jpg" alt="Einar">
+                        <span class="wave">👋</span>
+                    </div>
+                    <div>
+                        <h3>Einar</h3>
+                        <p class="team-role" data-i18n="einar-role">Prompt-tester</p>
+                        <p data-i18n="einar-text">Tester hvordan Claude svarer avhengig av språk – gir norsk eller engelsk best resultat? – og hvordan krav påvirker resultatet.</p>
+                        <div class="team-tags">
+                            <span>Prompting</span>
+                            <span data-i18n="einar-tag">Språktesting</span>
+                            <span>Now Assist</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="moments reveal">
+            <div class="section-head">
+                <h2 data-i18n="moments-heading">Øyeblikk fra høsten</h2>
+                <span class="hand" data-i18n="moments-hand">scroll →</span>
+            </div>
+
+            <div class="moments-track">
+                <figure class="polaroid">
+                    <img src="img/moments/img_1560.jpg" alt="Arbeidsplass med kaffe">
+                    <figcaption data-i18n="mom-1">Kaffe + kurs</figcaption>
+                </figure>
+                <figure class="polaroid">
+                    <img src="img/moments/img_1575.jpg" alt="KPMG-loungen">
+                    <figcaption data-i18n="mom-2">Loungen</figcaption>
+                </figure>
+                <figure class="polaroid">
+                    <img src="img/moments/img_2546.jpg" alt="Hamdi og Einar ved pultene">
+                    <figcaption data-i18n="mom-3">23. okt ✌️</figcaption>
+                </figure>
+                <div class="phone">
+                    <video src="img/moments/clip_2549.mp4" poster="img/moments/clip_2549.jpg" autoplay muted loop playsinline></video>
+                    <span class="live" data-i18n="live">Live</span>
+                </div>
+                <figure class="polaroid">
+                    <img src="img/moments/img_2547.jpg" alt="Selfie ved pultene">
+                    <figcaption data-i18n="mom-4">Fokus-modus</figcaption>
+                </figure>
+                <figure class="polaroid">
+                    <img src="img/moments/img_2634.jpg" alt="Einar i møterommet">
+                    <figcaption data-i18n="mom-5">Møterommet, 30. okt</figcaption>
+                </figure>
+                <figure class="polaroid">
+                    <img src="img/moments/img_2636.jpg" alt="Demo på storskjerm">
+                    <figcaption data-i18n="mom-6">Demo på storskjerm</figcaption>
+                </figure>
+                <div class="phone">
+                    <video src="img/moments/clip_2550.mp4" poster="img/moments/clip_2550.jpg" autoplay muted loop playsinline></video>
+                    <span class="live" data-i18n="live">Live</span>
+                </div>
+                <figure class="polaroid">
+                    <img src="img/moments/img_2868.jpg" alt="Hamdi og Einar på skjermen">
+                    <figcaption data-i18n="mom-7">På storskjerm, 4. nov 🎬</figcaption>
+                </figure>
+                <figure class="polaroid">
+                    <img src="img/moments/img_2548.jpg" alt="Arbeidsplassen">
+                    <figcaption data-i18n="mom-8">Dagens kontor</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="sn-hero reveal">
+            <div>
+                <p class="sn-eyebrow" data-i18n="sn-eyebrow">Hva vi jobber med</p>
+                <h2 data-i18n="sn-title"><span class="sn-hl">Bygg hvor som helst</span> med Claude Code</h2>
+                <p data-i18n="sn-text">I ServiceNow Studio, via SDK og Source Control – og vi dokumenterer hva som faktisk fungerer.</p>
+                <ul class="sn-checks">
+                    <li data-i18n="sn-check-1">Beste praksis for KI-assistert ServiceNow-utvikling</li>
+                    <li data-i18n="sn-check-2">Prompting, kontekst, arbeidsflyt og kvalitetskontroll</li>
+                    <li data-i18n="sn-check-3">App for ressursallokering som testcase</li>
+                </ul>
+                <a class="sn-btn" href="projects.html">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+                    <span data-i18n="sn-btn">Se prosjektene</span>
+                </a>
+            </div>
+            <img class="sn-hero-art" src="img/sn/hero.svg" alt="">
+        </section>
+
+        <div class="sn-filter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18l-7 8v6l-4-2v-4L3 5Z"/></svg>
+            <input id="diaryFilter" type="search" placeholder="Filter – søk i dagboken (f.eks. Lux, møte, uke 43)" data-placeholder-en="Filter – search the diary (e.g. Lux, meeting, week 43)" autocomplete="off">
+            <span class="sn-filter-count" id="diaryFilterCount"></span>
+        </div>
+        <p class="sn-empty" id="diaryEmpty" data-i18n="filter-empty">Ingen innlegg matcher søket ditt.</p>
+
         <section class="days">
 
             <div class="week-group">
@@ -181,6 +326,7 @@
                         <time datetime="2026-08-19" data-i18n="day1-date">
                             19. august 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000001</span>
                     </div>
                     <p data-i18n="day1-text">
                         I dag har vi hatt første dag hos KPMG. Dagen startet med en liten runde på kontoret.
@@ -199,6 +345,7 @@
                         <time datetime="2026-08-20" data-i18n="day2-date">
                             20. august 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000002</span>
                     </div>
                     <p data-i18n="day2-text">
                         Andre dag hos KPMG gikk for det meste i å fullføre ServiceNow kurset. Midt på dagen hadde vi et lite møte for å løse eventuelle problemer og hindringer.
@@ -215,10 +362,16 @@
                         <time datetime="2026-08-26" data-i18n="day3-date">
                             26. august 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000003</span>
                     </div>
                     <p data-i18n="day3-text">
                         Vi ble enige om å bli ferdige med kurset til onsdag, slik at vi kunne komme i gang med prosjektene når vi kom til kontoret. Da vi kom dit, startet vi med et møte med Jostein, der han fortalte oss mer om hva vi skal utforske og hva som forventes av oss. Deretter tok vi oss tid til planlegging og la fundamentet vi trengte videre. Vi fikk dessverre nettverksproblemer på kontoret, så vi måtte dra derfra tidligere enn planlagt.
                     </p>
+                    <div class="day-photos tall">
+                        <img src="img/moments/img_1563.jpg" alt="Einar i dypt fokus" data-caption="Hmm… 🤔">
+                        <img src="img/moments/img_1564.jpg" alt="Einar koder" data-caption="Einar i gang">
+                        <img src="img/moments/img_1570.jpg" alt="Hamdi jobber" data-caption="Hamdi planlegger">
+                    </div>
                 </article>
 
                 <article class="day-card">
@@ -227,10 +380,15 @@
                         <time datetime="2026-08-27" data-i18n="day4-date">
                             27. august 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000004</span>
                     </div>
                     <p data-i18n="day4-text">
                         Torsdag kom vi tidlig på kontoret og fikk tilgang til Claude-brukere, slik at vi kunne ta i bruk Claude Code. Vi startet dermed å utforske verktøyet, før vi samlet oss igjen mot slutten av dagen for å planlegge hvordan vi skal fortsette å utforske og dokumentere funnene våre.
                     </p>
+                    <div class="day-photos tall">
+                        <img src="img/moments/img_1590.jpg" alt="KPMG-inngangen i 6. etasje" data-caption="6. etasje">
+                        <img src="img/moments/img_1575.jpg" alt="KPMG-loungen" data-caption="Loungen">
+                    </div>
                 </article>
             </div>
             <div class="week-group">
@@ -242,6 +400,7 @@
                         <time datetime="2026-09-02" data-i18n="day5-date">
                             02. september 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000005</span>
                     </div>
                     <p data-i18n="day5-text">
                         I dag fikk vi planlagt fremgangsmåten vi vil bruke og hva som må gjøres. Det blir mye testing av Claude Code (Service Now SDK) og Now Assist for å se hva som fungerer best til ulike formål. Vårt formål er å dokumentere og teste så mye vi kan slik at fremtidige oppsett blir raskere og bedre. Dokumentasjonen skal brukes til å velge hvilke metoder en bruker for å bygge apper i ServiceNow.
@@ -254,6 +413,7 @@
                         <time datetime="2026-09-03" data-i18n="day6-date">
                             3. september 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000006</span>
                     </div>
                     <p data-i18n="day6-text">
                         I dag har det vært hjemmekontor. Vi har brukt dagen på å teste Claude Code og Now Assist, koble til PDI og kjøre noen test prompts. Dokumentasjonen vil etterhvert bli lagt inn i GitHub. For øyeblikket er det kun en README-fil, men vi vil også begynne å legge til andre filer, bilder og dokumenter for å styrke dokumentasjonen.
@@ -270,6 +430,7 @@
                         <time datetime="2026-09-09" data-i18n="day7-date">
                             9. september 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000007</span>
                     </div>
                     <p data-i18n="day7-text">
                         Denne uken er det Hamdis tur til å skrive dagboken, ettersom vi har blitt enige om å bytte på ukentlig hvem som fører den. Onsdag møtte Hamdi og Einar opp på kontoret ekstra tidlig, men det tok litt tid før vi kom oss på nettet. Da vi først kom i gang, fikk vi derimot fort fart på arbeidet. Vi fordelte konkrete ansvarsområder: Einar har testet hvordan Claude responderer avhengig av språk, blant annet om man får bedre resultater på engelsk eller norsk, og annet rundt dette. Hamdi brukte tiden på å undersøke ulike måter å bygge broen mellom Claude Code og instansen i ServiceNow Studio, og fant underveis noen andre punkter som er notert som sidenotat til videre undersøkelse. Klokken 13 dro vi begge ned til lobbyen, hvor hele kontoret samlet seg for å tenne et lys og se på kong Haralds begravelse. Det var en fin seremoni, og dagen ble avsluttet der. Jeg og Einar kommuniserte videre på Discord og ble enige om å ta hjemmekontor på torsdag, og heller holde hverandre oppdatert underveis når det er nødvendig.
@@ -286,10 +447,16 @@
                         <time datetime="2026-09-17" data-i18n="day8-date">
                             17. september 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000008</span>
                     </div>
                     <p data-i18n="day8-text">
                          Siden det har vært Techpoint på onsdag har vi kun hatt torsdagen på kontoret. Vi hadde vårt første møte om fremdrift i dag, sammen med vår veileder. Der vi fikk vi beskjed om at vi var godt på vei og hvilke endringer han ønsket videre. Vår løsning var fin, men skulle gjerne vært noe mer interaktiv. I tillegg ville han ha flere ting på samme side isteden for å dele det opp i andre sider. Det er derimot ikke dette som er hovedoppgaven, men det er prosessen som er viktig. I slutten av november skal vi ha en presentasjon for deler av selskapet som viser hvordan en går frem for å lage en app i ServiceNow ved hjelp av AI, som for eksempel Claude Code. Vi har nå fått noe mer forståelse for prompting knyttet til ServiceNow og vil fortsette å dokumentere dette i GitHub.
                     </p>
+                    <div class="day-photos">
+                        <img src="img/moments/img_1850.jpg" alt="Selfie i møterommet" data-caption="Fremdriftsmøte">
+                        <img src="img/moments/img_1851.jpg" alt="Møte med veileder" data-caption="Gjennomgang på skjerm">
+                        <img src="img/moments/img_1853.jpg" alt="Veileder og Einar på kontoret" data-caption="Etter møtet">
+                    </div>
                 </article>
             </div>
 
@@ -302,6 +469,7 @@
                         <time datetime="2026-09-23" data-i18n="day9-date">
                             23. september 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000009</span>
                     </div>
                     <p data-i18n="day9-text">
                          I dag har vi jobbet med spesifikasjonskrav til AI. Vi har laget et eget dokument som setter begrensninger og krav til hva som skal bli gjort og hva som skal være i applikasjonen. Denne gang valgte vi å sette Claude til å lage komponenter istedenfor å lage hele siden som en. Det betyr at utvikler enkelt kan flytte og endre på komponenter i siden ved bruk av UI builder. Fremover vil vi forbedre dokumentasjonen og lage en mer tydelig oppskrift fra start til slutt.
@@ -318,6 +486,7 @@
                         <time datetime="2026-09-30" data-i18n="day10-date">
                             30. september 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000010</span>
                     </div>
                     <p data-i18n="day10-text">
                         Uke 40 var det høstferie, og vi var begge bortreist fra Kristiansand. Vi valgte derfor å kalle dette en hjemmekontoruke, og avtalte å holde kontakten dersom noe skulle oppstå. I løpet av uken fortsatte vi arbeidet med å teste ulike kjøringer etter spesifikke krav, slik at vi kan se hvordan resultatene varierer avhengig av hvilke krav vi setter. Vi har planlagt et møte så snart vi begge er tilbake i Kristiansand, der vi skal diskutere funnene og planlegge veien videre.
@@ -334,6 +503,7 @@
                         <time datetime="2026-10-09" data-i18n="day11-date">
                             9. oktober 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000011</span>
                     </div>
                     <p data-i18n="day11-text">
                         Uke 41 jobbet vi hver for oss. Hamdi dro på kontoret på fredag, mens Einar hadde hjemmekontor. Vi holdt kontakten gjennom hele uken, slik at vi var oppdatert på hva den andre jobbet med. Status 2-innleveringen nærmer seg, så vi planlegger leveransen. Vi skal lage videoklipp og intervjue noen av de ansatte rundt problemstillingene våre.
@@ -350,6 +520,7 @@
                         <time datetime="2026-10-14" data-i18n="day12-date">
                             14. oktober 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000012</span>
                     </div>
                     <p data-i18n="day12-text">
                         Uke 42 gikk med til mer testing og dokumentasjon. Vi fortsatte arbeidet fra de foregående ukene, og testet flere kjøringer for å se hvordan resultatene varierer. Funnene ble dokumentert fortløpende i GitHub, slik at vi bygger opp et tydeligere grunnlag for veien videre.
@@ -366,10 +537,16 @@
                         <time datetime="2026-10-21" data-i18n="day13-date">
                             21. oktober 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000013</span>
                     </div>
                     <p data-i18n="day13-text">
                         I uke 43 jobbet vi med AIUX og Lux. ServiceNow har et eget rammeverk som passer til AI. Vi fant ut at det var enkelt å utvikle i, men at alle gamle oppsett og instanser må endres for å legge til rette for det. 
                     </p>
+                    <div class="day-photos">
+                        <img src="img/moments/img_2546.jpg" alt="Einar og Hamdi ved pultene" data-caption="23. oktober">
+                        <img src="img/moments/img_2547.jpg" alt="Selfie ved pultene" data-caption="Fokus-modus">
+                        <img src="img/moments/img_2548.jpg" alt="Arbeidsplassen" data-caption="Dagens kontor">
+                    </div>
                 </article>
             </div>
 
@@ -382,10 +559,15 @@
                         <time datetime="2026-10-28" data-i18n="day14-date">
                             28. oktober 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000014</span>
                     </div>
                     <p data-i18n="day14-text">
                         I uke 44 så vi nærmere på hvilken KI-modell som passer best til ulike oppgaver. Vi sammenlignet en større og en mindre modell på de samme oppgavene i ServiceNow. Den større modellen håndterte mer avansert kode bedre, mens den mindre var raskere og mye billigere i bruk. For enklere oppgaver ble resultatene ganske like. Vi dokumenterte sammenligningen slik at utviklere lettere kan velge modell ut fra hva den skal brukes til.
                     </p>
+                    <div class="day-photos">
+                        <img src="img/moments/img_2634.jpg" alt="Einar i møterommet" data-caption="Modell mot modell">
+                        <img src="img/moments/img_2636.jpg" alt="Demo på storskjerm" data-caption="Resultatene på storskjerm">
+                    </div>
                 </article>
             </div>
 
@@ -398,10 +580,14 @@
                         <time datetime="2026-11-04" data-i18n="day15-date">
                             4. november 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000015</span>
                     </div>
                     <p data-i18n="day15-text">
                         Uke 45 gikk med til å fullføre testingen av den nyeste versjonen av spesifikasjonen. Vi kjørte flere runder og sjekket resultatene opp mot kravene våre, og alle kjøringene besto. Vi testet også hvordan løsningene håndterer endringer i etterkant, noe som er viktig for hvor nyttig oppsettet er i praksis. I tillegg laget vi faste testoppskrifter, slik at testene kan gjentas likt hver gang.
                     </p>
+                    <div class="day-photos">
+                        <img src="img/moments/img_2868.jpg" alt="Hamdi og Einar på skjermen" data-caption="4. november 🎬">
+                    </div>
                 </article>
             </div>
 
@@ -414,6 +600,7 @@
                         <time datetime="2026-11-10" data-i18n="day16-date">
                             10. november 2026
                         </time>
+                        <span class="sn-record" title="Dagbok-record">DBK0000016</span>
                     </div>
                     <p data-i18n="day16-text">
                         I uke 46 har vi brukt tid på å dokumentere resultatene fra de siste testrundene. Funnene våre ble oppdatert og samlet, slik at det blir enklere å se hva som fungerer og hva som ikke gjør det. Vi har også startet en ny type test, der vi ser på hvordan løsningene håndterer feil. Neste steg er å teste feilsøking, altså hvor godt KI-en klarer å finne og rette feil på egen hånd.
@@ -446,6 +633,35 @@
                 "stat-fixed-label": "Fixed office days",
                 "stat-period-value": "Autumn 2026",
                 "stat-period-label": "Internship period",
+                "sn-eyebrow": "What we work on",
+                "sn-title": "<span class=\"sn-hl\">Build anywhere</span> with Claude Code",
+                "sn-text": "In ServiceNow Studio, through the SDK and Source Control – and we document what actually works.",
+                "sn-check-1": "Best practice for AI-assisted ServiceNow development",
+                "sn-check-2": "Prompting, context, workflow and quality control",
+                "sn-check-3": "A resource allocation app as our test case",
+                "sn-btn": "See the projects",
+                "filter-empty": "No entries match your search.",
+                "pol-1": "Tea with our supervisor ☕",
+                "pol-2": "Office selfie",
+                "pol-3": "Day 3 – ready to go! 👍",
+                "team-heading": "Meet the team",
+                "team-hand": "two students, one diary",
+                "hamdi-role": "Bridge builder",
+                "hamdi-text": "Exploring how Claude Code can connect to the instance in ServiceNow Studio – and noting every side quest along the way.",
+                "einar-role": "Prompt tester",
+                "einar-text": "Testing how Claude responds depending on language – does Norwegian or English give better results? – and how requirements shape the output.",
+                "einar-tag": "Language testing",
+                "moments-heading": "Moments from the autumn",
+                "moments-hand": "scroll →",
+                "live": "Live",
+                "mom-1": "Coffee + courses",
+                "mom-2": "The lounge",
+                "mom-3": "Oct 23 ✌️",
+                "mom-4": "Focus mode",
+                "mom-5": "Meeting room, Oct 30",
+                "mom-6": "Demo on the big screen",
+                "mom-7": "On the big screen, Nov 4 🎬",
+                "mom-8": "Today's office",
                 "week34-heading": "Week 34",
                 "week35-heading": "Week 35",
                 "day1-date": "August 19, 2026",
@@ -551,6 +767,8 @@
                 });
             }
         });
+
     </script>
+    <script src="site.js?v=3"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Status 2</title>
-    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="site.css?v=3">
 
     <style>
         /* Container alignment for language switchers */
@@ -142,14 +142,25 @@
             </p>
         </header>
 
+        <ol class="sn-flow" aria-label="Prosjektfaser">
+            <li class="done"><b data-i18n="flow-1">Status 1</b><span data-i18n="flow-1-sub">Uke 38</span></li>
+            <li class="current"><b data-i18n="flow-2">Status 2</b><span data-i18n="flow-2-sub">Uke 41</span></li>
+            <li class=""><b data-i18n="flow-3">Presentasjon</b><span data-i18n="flow-3-sub">Slutten av november</span></li>
+            <li class=""><b data-i18n="flow-4">Ferdig</b><span data-i18n="flow-4-sub">Høst 2026</span></li>
+        </ol>
+
         <section class="projects">
 
-            <h2 class="projects-heading" data-i18n="status-heading">Status etter uke 41</h2>
-            <p class="projects-intro" data-i18n="status-intro">
+            <div class="sn-section-head">
+                <p class="sn-eyebrow" data-i18n="sn-go-further">Gå videre</p>
+                <h2 data-i18n="status-heading">Status etter uke 41</h2>
+                <p data-i18n="status-intro">
                 Vi er nå godt i gang med prosjektet og har mange mulige ressursallokerings eksempler. Det er nå også lagt til mer informasjon om oppstart med Claude. 
             </p>
+            </div>
 
-            <article class="project-card">
+            <article class="project-card sn-card">
+                <div class="sn-banner green"></div>
                 <div class="project-header">
                     <span class="project-name" data-i18n="status-badge-changes">Endringer</span>
                     <h3 class="project-title" data-i18n="status-changes-title">Hva har endret seg siden status 1?</h3>
@@ -159,7 +170,8 @@
                 </p>
             </article>
 
-            <article class="project-card">
+            <article class="project-card sn-card">
+                <div class="sn-banner teal"></div>
                 <div class="project-header">
                     <span class="project-name" data-i18n="status-badge-current">Nåsituasjon</span>
                     <h3 class="project-title" data-i18n="status-current-title">Hvor står prosjektet nå?</h3>
@@ -169,7 +181,8 @@
                 </p>
             </article>
 
-            <article class="project-card">
+            <article class="project-card sn-card">
+                <div class="sn-banner gold"></div>
                 <div class="project-header">
                     <span class="project-name" data-i18n="status-badge-next">Videre</span>
                     <h3 class="project-title" data-i18n="status-next-title">Veien videre</h3>
@@ -182,12 +195,15 @@
             <section class="video-section">
                 <h2 class="section-heading" data-i18n="video-heading">KI-bruk</h2>
 
-                <div class="video-frame">
+                <div class="sn-player">
+                    <div class="sn-player-bar"><span class="dot"></span><span data-i18n="player-label">Intervju &middot; KPMG-ansatte om KI</span></div>
+                    <div class="video-frame">
                     <!-- Legg videofilen i img/ og bytt ut filnavnet under -->
-                    <video controls preload="metadata" poster="">
+                    <video controls preload="metadata" poster="img/intervju_poster.jpg">
                         <source src="img/intervju_fixed.mp4" type="video/mp4">
                         <span data-i18n="video-fallback">Nettleseren din støtter ikke avspilling av video.</span>
                     </video>
+                </div>
                 </div>
 
                 <p class="video-caption" data-i18n="video-caption">
@@ -225,6 +241,16 @@
                 "status-badge-next": "Next",
                 "status-next-title": "The road ahead",
                 "status-next-p1": "Once we have tested more of the setup with actual users next week, we will develop the documentation further and make sure the gaps are closed. In time it will also be important to assess the areas where AI is best put to use. We recently had a meeting about Lux, a framework developed specifically for AI in ServiceNow.",
+                "flow-1": "Status 1",
+                "flow-1-sub": "Week 38",
+                "flow-2": "Status 2",
+                "flow-2-sub": "Week 41",
+                "flow-3": "Presentation",
+                "flow-3-sub": "End of November",
+                "flow-4": "Done",
+                "flow-4-sub": "Autumn 2026",
+                "sn-go-further": "Go further",
+                "player-label": "Interview &middot; KPMG employees on AI",
                 "video-heading": "AI in use",
                 "video-caption": "In the video above you can see an interview with a couple of KPMG's employees about AI.",
                 "video-fallback": "Your browser does not support video playback."
@@ -284,5 +310,6 @@
             }
         });
     </script>
+    <script src="site.js?v=3"></script>
 </body>
 </html>

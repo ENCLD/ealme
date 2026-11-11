@@ -10,3 +10,11 @@ obj/
 *.suo
 *.userosscache
 *.sln.docstates
+
+# macOS
+.DS_Store
+
+# Raw phone originals (web versions live in img/moments)
+*.HEIC
+*.MOV
+img/IMG_*
