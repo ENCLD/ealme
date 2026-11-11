@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Status 1</title>
-    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="site.css?v=3">
 
     <style>
         /* Container alignment for language switchers */
@@ -94,6 +94,13 @@
                     </svg>
                     <span data-i18n="nav-status2">Status 2</span>
                 </a>
+                <a href="expo.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="M10 9.5v5l4.5-2.5L10 9.5Z" />
+                    </svg>
+                    <span data-i18n="nav-expo">Expo</span>
+                </a>
             </div>
 
             <!-- Container for buttons -->
@@ -119,15 +126,34 @@
 
     <main class="container">
 
-        <header class="page-header">
-            <p class="eyebrow" data-i18n="header-eyebrow">Dokumentasjon</p>
-            <h1 data-i18n="header-title">Status 1</h1>
-            <p class="page-note" data-i18n="header-note">
-                En oppsummering av bedriften basert på det vi har erfart i praksisen så langt, uke 34 til 38.
-            </p>
+        <header class="sn-record-head">
+            <div class="sn-record-top">
+                <div class="sn-record-line">
+                    <span class="sn-record-type" data-i18n="rec-type">Statusrapport</span>
+                    <span class="sn-state" data-i18n="rec-state">Lukket &middot; levert</span>
+                </div>
+                <h1 data-i18n="header-title">Status 1</h1>
+                <p class="page-note" data-i18n="header-note">
+                    En oppsummering av bedriften basert på det vi har erfart i praksisen så langt, uke 34 til 38.
+                </p>
+            </div>
+            <dl class="sn-fields">
+                <div><dt data-i18n="rec-f-number">Nummer</dt><dd><span class="mono">STS0000001</span></dd></div>
+                <div><dt data-i18n="rec-f-period">Periode</dt><dd data-i18n="rec-v-period">Uke 34–38</dd></div>
+                <div><dt data-i18n="rec-f-assigned">Tildelt</dt><dd><span class="mini-avatars"><img src="img/moments/avatar_hamdi.jpg" alt=""><img src="img/moments/avatar_einar.jpg" alt=""></span>Hamdi &amp; Einar</dd></div>
+                <div><dt data-i18n="rec-f-company">Bedrift</dt><dd>KPMG Norge</dd></div>
+                <div><dt data-i18n="rec-f-category">Kategori</dt><dd data-i18n="rec-v-category">Bedriftsprofil</dd></div>
+            </dl>
         </header>
 
-        <section class="stat-grid">
+        <ol class="sn-flow" aria-label="Prosjektfaser">
+            <li class="current"><b data-i18n="flow-1">Status 1</b><span data-i18n="flow-1-sub">Uke 38</span></li>
+            <li class=""><b data-i18n="flow-2">Status 2</b><span data-i18n="flow-2-sub">Uke 41</span></li>
+            <li class=""><b data-i18n="flow-3">Presentasjon</b><span data-i18n="flow-3-sub">Slutten av november</span></li>
+            <li class=""><b data-i18n="flow-4">Ferdig</b><span data-i18n="flow-4-sub">Høst 2026</span></li>
+        </ol>
+
+        <section class="stat-grid sn-scores">
             <div class="stat-tile">
                 <span class="stat-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -136,7 +162,7 @@
                     </svg>
                 </span>
                 <span class="stat-text">
-                    <span class="stat-value">155</span>
+                    <span class="stat-value" data-count>155</span>
                     <span class="stat-label" data-i18n="stat-countries-label">Land globalt</span>
                 </span>
             </div>
@@ -151,7 +177,7 @@
                     </svg>
                 </span>
                 <span class="stat-text">
-                    <span class="stat-value" data-i18n="stat-global-employees-value">275 000+</span>
+                    <span class="stat-value" data-count data-i18n="stat-global-employees-value">275 000+</span>
                     <span class="stat-label" data-i18n="stat-global-employees-label">Ansatte globalt</span>
                 </span>
             </div>
@@ -166,7 +192,7 @@
                     </svg>
                 </span>
                 <span class="stat-text">
-                    <span class="stat-value" data-i18n="stat-global-revenue-value">38,4 mrd. USD</span>
+                    <span class="stat-value" data-count data-i18n="stat-global-revenue-value">38,4 mrd. USD</span>
                     <span class="stat-label" data-i18n="stat-global-revenue-label">Global omsetning 2024</span>
                 </span>
             </div>
@@ -179,7 +205,7 @@
                     </svg>
                 </span>
                 <span class="stat-text">
-                    <span class="stat-value" data-i18n="stat-norway-employees-value">1850+</span>
+                    <span class="stat-value" data-count data-i18n="stat-norway-employees-value">1850+</span>
                     <span class="stat-label" data-i18n="stat-norway-employees-label">Ansatte i Norge</span>
                 </span>
             </div>
@@ -187,12 +213,26 @@
 
         <section class="projects">
 
-            <h2 class="projects-heading" data-i18n="status-heading">Om bedriften: status etter uke 38</h2>
-            <p class="projects-intro" data-i18n="status-intro">
+            <div class="sn-section-head">
+                <p class="sn-eyebrow" data-i18n="sn-go-further">Gå videre</p>
+                <h2 data-i18n="status-heading">Om bedriften: status etter uke 38</h2>
+                <p data-i18n="status-intro">
                 Basert på det vi har erfart i praksisen hos KPMG så langt, og litt research på nett, oppsummerer vi her hva slags bedrift dette er, hvor store de er, hva vi konkret har jobbet med, og hva som har stått ut underveis.
             </p>
+            </div>
 
-            <article class="project-card">
+            <nav class="sn-tabs" aria-label="Seksjoner">
+                <a href="#sec-industry" data-i18n="status-badge-industry">Bransje</a>
+                <a href="#sec-size" data-i18n="status-badge-size">Størrelse</a>
+                <a href="#sec-tasks" data-i18n="status-badge-tasks">Arbeidsoppgaver</a>
+                <a href="#sec-highlights" data-i18n="status-badge-highlights">Utfordringer &amp; høydepunkter</a>
+                <a href="#sec-other" data-i18n="status-badge-other">Annet</a>
+                <a href="#sec-gallery" data-i18n="gallery-heading">Bilder fra kontoret</a>
+            </nav>
+
+
+            <article class="project-card sn-card" id="sec-industry">
+                <div class="sn-banner navy"></div>
                 <div class="project-header">
                     <span class="project-name" data-i18n="status-badge-industry">Bransje</span>
                     <h3 class="project-title" data-i18n="status-industry-title">Hva slags bedrift er KPMG?</h3>
@@ -205,7 +245,8 @@
                 </p>
             </article>
 
-            <article class="project-card">
+            <article class="project-card sn-card" id="sec-size">
+                <div class="sn-banner blue"></div>
                 <div class="project-header">
                     <span class="project-name" data-i18n="status-badge-size">Størrelse</span>
                 </div>
@@ -217,7 +258,8 @@
                 </p>
             </article>
 
-            <article class="project-card">
+            <article class="project-card sn-card" id="sec-tasks">
+                <div class="sn-banner green"></div>
                 <div class="project-header">
                     <span class="project-name" data-i18n="status-badge-tasks">Arbeidsoppgaver</span>
                 </div>
@@ -227,22 +269,28 @@
                 <p data-i18n="status-tasks-p2">
                     Videre logger vi eksperimentene systematisk (prompt, kontekst, resultat og manuelle korreksjoner) i et eget dokumentasjons-repo, og bygger en støtteapplikasjon for ressursallokering i ServiceNow som testmiljø for metodikken. I tillegg skriver vi en ukentlig dagbok, som vi bytter på å føre, og dokumenterer arbeidet løpende på GitHub. Her er et skjermbilde fra applikasjonen vi bygger, som viser en oversikt over ressurser/konsulenter og deres tilgjengelighet.
                 </p>
-                <img src="img/project1.png" alt="Project screenshot">
+                <figure class="browser-frame">
+                    <div class="browser-bar"><i></i><i></i><i></i><span>dev.service-now.com/now/resource-allocation</span></div>
+                    <img src="img/project1.png" alt="Skjermbilde av ressursallokerings-appen" data-caption="Ressursallokerings-appen">
+                </figure>
             </article>
 
-            <article class="project-card">
+            <article class="project-card sn-card" id="sec-highlights">
+                <div class="sn-banner gold"></div>
                 <div class="project-header">
                     <span class="project-name" data-i18n="status-badge-highlights">Utfordringer &amp; høydepunkter</span>
                 </div>
                 <p data-i18n="status-highlights-p1">
                     Av utfordringer har vi blant annet møtt nettverksproblemer på kontoret som satte oss tilbake en hel dag, og det generelle at &laquo;veien blir til mens man går&raquo;: det finnes ingen ferdig oppskrift for å bruke Claude Code sammen med ServiceNow, så vi må selv definere metodikk og beste praksis underveis.
                 </p>
+                <blockquote class="sn-quote hand" data-i18n="highlights-quote">&laquo;Veien blir til mens man går&raquo;</blockquote>
                 <p data-i18n="status-highlights-p2">
                     Det mest spennende er å være tidlig ute med å utforske et raskt voksende felt, AI-assistert utvikling, i en konsulentbransje der dette blir stadig mer relevant, og at funnene våre skal brukes praktisk til å avgjøre hvordan fremtidige ServiceNow-prosjekter bygges i KPMG. Vi fikk også et lite innblikk i bedriftskulturen da hele kontoret samlet seg i lobbyen for å markere kong Haralds begravelse, en påminnelse om fellesskapet på arbeidsplassen utenom selve arbeidsoppgavene.
                 </p>
             </article>
 
-            <article class="project-card">
+            <article class="project-card sn-card" id="sec-other">
+                <div class="sn-banner teal"></div>
                 <div class="project-header">
                     <span class="project-name" data-i18n="status-badge-other">Annet</span>
                 </div>
@@ -251,16 +299,21 @@
                 </p>
             </article>
 
-            <section class="company-gallery">
-                <h2 class="section-heading" data-i18n="gallery-heading">Bilder fra kontoret</h2>
+            <section class="company-gallery" id="sec-gallery">
+                <h2 class="section-title" data-i18n="gallery-heading">Bilder fra kontoret</h2>
 
-                <div class="gallery-grid">
-                    <!-- Replace each placeholder with: <div class="gallery-item"><img src="img/xxx.jpg" alt="..."></div> -->
-                    <div class="gallery-item"><img src="img/meet1.jpg" alt="Sample Photo"></div>
-                    <div class="gallery-item"><img src="img/meet2.jpg" alt="Sample Photo"></div>
-                    <div class="gallery-item"><img src="img/office1.jpg" alt="Sample Photo"></div>
-                    <div class="gallery-item"><img src="img/first_day.jpg" alt="Sample Photo"></div>
-                    
+                <div class="bento">
+                    <figure class="big"><img src="img/first_day.jpg" alt="Hamdi og Einar første dag"><figcaption data-i18n="g-1">Første dag 🎉</figcaption></figure>
+                    <figure class="tall"><img src="img/moments/img_1590.jpg" alt="KPMG-inngangen"><figcaption data-i18n="g-2">6. etasje</figcaption></figure>
+                    <figure><img src="img/moments/img_1571.jpg" alt="Tommel opp-selfie"><figcaption data-i18n="g-3">Klare! 👍</figcaption></figure>
+                    <figure><img src="img/moments/img_1852.jpg" alt="Hamdi og veileder"><figcaption data-i18n="g-4">Te med veilederen</figcaption></figure>
+                    <figure class="wide"><img src="img/meet2.jpg" alt="Møterommet"><figcaption data-i18n="g-5">Fremdriftsmøte</figcaption></figure>
+                    <figure class="wide"><img src="img/moments/img_1575.jpg" alt="KPMG-loungen"><figcaption data-i18n="g-6">Loungen</figcaption></figure>
+                    <figure class="tall"><img src="img/office1.jpg" alt="Kontorlandskapet"><figcaption data-i18n="g-7">Kontorlandskapet</figcaption></figure>
+                    <figure class="wide"><img src="img/meet1.jpg" alt="Gjennomgang på skjerm"><figcaption data-i18n="g-8">Gjennomgang på skjerm</figcaption></figure>
+                    <figure><img src="img/moments/img_1564.jpg" alt="Einar koder"><figcaption data-i18n="g-9">Kode-modus</figcaption></figure>
+                    <figure class="wide"><img src="img/moments/img_1570.jpg" alt="Hamdi jobber"><figcaption data-i18n="g-10">Planlegging</figcaption></figure>
+                    <figure><img src="img/moments/img_1560.jpg" alt="Kaffe og kurs"><figcaption data-i18n="g-11">Kaffe + kurs</figcaption></figure>
                 </div>
             </section>
         </section>
@@ -279,11 +332,42 @@
         // JavaScript only needs the English data
         const translations = {
             en: {
+                "flow-1": "Status 1",
+                "flow-1-sub": "Week 38",
+                "flow-2": "Status 2",
+                "flow-2-sub": "Week 41",
+                "flow-3": "Presentation",
+                "flow-3-sub": "End of November",
+                "flow-4": "Done",
+                "flow-4-sub": "Autumn 2026",
+                "rec-type": "Status report",
+                "rec-state": "Closed &middot; delivered",
+                "rec-f-number": "Number",
+                "rec-f-period": "Period",
+                "rec-v-period": "Weeks 34–38",
+                "rec-f-assigned": "Assigned to",
+                "rec-f-company": "Company",
+                "rec-f-category": "Category",
+                "rec-v-category": "Company profile",
+                "sn-go-further": "Go further",
+                "highlights-quote": "&laquo;The road is made by walking&raquo;",
+                "g-1": "First day 🎉",
+                "g-2": "6th floor",
+                "g-3": "Ready! 👍",
+                "g-4": "Tea with our supervisor",
+                "g-5": "Progress meeting",
+                "g-6": "The lounge",
+                "g-7": "The open office",
+                "g-8": "Review on the big screen",
+                "g-9": "Coding mode",
+                "g-10": "Planning",
+                "g-11": "Coffee + courses",
                 "gallery-heading": "Office photos",
                 "nav-dagbok": "Diary",
                 "nav-prosjekt": "Projects",
                 "nav-status1": "Status 1",
                 "nav-status2": "Status 2",
+                "nav-expo": "Expo",
                 "logo-sub": "Intern diary",
                 "sidebar-caption": "KPMG internship &middot; Autumn 2026",
                 "header-eyebrow": "Documentation",
@@ -377,13 +461,7 @@
                 });
             }
         });
-        const images = document.querySelectorAll(".gallery-item");
-
-        images.forEach(function (img) {
-            img.addEventListener("click", function () {
-                img.classList.toggle("zoomed");
-            });
-        });
     </script>
+    <script src="site.js?v=3"></script>
 </body>
 </html>

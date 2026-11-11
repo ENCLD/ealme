@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expo</title>
+    <link rel="stylesheet" href="site.css?v=3">
+
+    <style>
+        /* Container alignment for language switchers */
+        .controls {
+            display: inline-flex;
+            gap: 6px;
+            background-color: #f1f3f5;
+            padding: 4px;
+            border-radius: 30px; /* Outer rounded track */
+        }
+
+            /* Standard round button style rules */
+            .controls button {
+                background: transparent;
+                color: #495057;
+                border: none;
+                padding: 6px 14px;
+                font-size: 13px;
+                font-weight: 600;
+                font-family: inherit;
+                cursor: pointer;
+                border-radius: 20px; /* Pill-shaped round design */
+                transition: all 0.2s ease-in-out;
+            }
+
+                /* Hover animation properties */
+                .controls button:hover {
+                    color: #1a1a1a;
+                }
+
+                /* Active highlight status styling profile */
+                .controls button.active {
+                    background-color: #ffffff;
+                    color: #000000;
+                    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+                }
+
+        /* Video block: keeps a fixed 16:9 frame */
+        .video-frame {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #f1f3f5;
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+            .video-frame video {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                background: #000;
+            }
+
+        .video-caption {
+            margin-top: 10px;
+            color: #6b7280;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="top-menu">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-title">KPMG</span>
+                <span class="logo-sub" data-i18n="logo-sub">Praksisstudenter dagbok</span>
+            </a>
+
+            <!-- This will hide/show based on the site.css mobile setup -->
+            <div class="nav-links" id="navMenu">
+                <a href="index.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 5.5C4 4.67 4.67 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13Z" />
+                        <path d="M20 5.5c0-.83-.67-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z" />
+                    </svg>
+                    <span data-i18n="nav-dagbok">Dagbok</span>
+                </a>
+                <a href="projects.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 7a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Z" />
+                    </svg>
+                    <span data-i18n="nav-prosjekt">Prosjekter</span>
+                </a>
+                <a href="status1.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 17V9M15 17v-4M12 17V5M4 19h16" />
+                    </svg>
+                    <span data-i18n="nav-status1">Status 1</span>
+                </a>
+                <a href="status2.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 17V9M15 17v-4M12 17V5M4 19h16" />
+                    </svg>
+                    <span data-i18n="nav-status2">Status 2</span>
+                </a>
+                <a href="expo.html" class="active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="M10 9.5v5l4.5-2.5L10 9.5Z" />
+                    </svg>
+                    <span data-i18n="nav-expo">Expo</span>
+                </a>
+            </div>
+
+            <!-- Container for buttons -->
+            <div class="controls-wrapper" style="display: flex; align-items: center; gap: 10px;">
+                <!-- Styled Pill Container Switch -->
+                <div class="controls">
+                    <button id="btn-no" class="active" onclick="setLanguage('no')">Norsk</button>
+                    <button id="btn-en" onclick="setLanguage('en')">English</button>
+                </div>
+
+                <!-- Burger button sits beautifully on the side -->
+                <button class="burger-btn" id="burgerBtn" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+
+            <p class="sidebar-caption" data-i18n="sidebar-caption">KPMG praksis &middot; Høst 2026</p>
+        </div>
+    </nav>
+
+
+    <main class="container">
+
+        <header class="page-header">
+            <p class="eyebrow" data-i18n="header-eyebrow">Utstilling</p>
+            <h1 data-i18n="header-title">EXPO</h1>
+            <p class="page-note" data-i18n="header-note">
+                En kort film om hvordan en vanlig dag ser ut for oss som praksisstudenter hos KPMG.
+            </p>
+        </header>
+
+        <section class="projects">
+
+            <div class="sn-section-head">
+                <p class="sn-eyebrow" data-i18n="sn-featured">Film</p>
+                <h2 data-i18n="video-heading">En dag på kontoret</h2>
+                <p data-i18n="video-intro">
+                    Bli med oss gjennom en dag på KPMG-kontoret, fra vi kommer inn døren til arbeidet med ServiceNow og KI.
+                </p>
+            </div>
+
+            <div class="sn-player">
+                <div class="sn-player-bar"><span class="dot"></span><span data-i18n="player-label">KPMG &middot; En dag på kontoret</span></div>
+                <div class="video-frame">
+                    <video controls preload="metadata" playsinline poster="img/expo_endag_poster.jpg">
+                        <source src="img/expo_endag.mp4" type="video/mp4">
+                        <span data-i18n="video-fallback">Nettleseren din støtter ikke avspilling av video.</span>
+                    </video>
+                </div>
+            </div>
+
+            <p class="video-caption" data-i18n="video-caption">
+                Filmen er laget av oss som praksisstudenter, høsten 2026.
+            </p>
+
+        </section>
+
+    </main>
+
+
+
+    <script>
+        // JavaScript only needs the English data
+        const translations = {
+            en: {
+                "nav-dagbok": "Diary",
+                "nav-prosjekt": "Projects",
+                "nav-status1": "Status 1",
+                "nav-status2": "Status 2",
+                "nav-expo": "Expo",
+                "logo-sub": "Intern diary",
+                "sidebar-caption": "KPMG internship &middot; Autumn 2026",
+                "header-eyebrow": "Showcase",
+                "header-title": "EXPO",
+                "header-note": "A short film about what an ordinary day looks like for us as interns at KPMG.",
+                "sn-featured": "Film",
+                "video-heading": "A day at the office",
+                "video-intro": "Join us through a day at the KPMG office, from the moment we walk in the door to our work with ServiceNow and AI.",
+                "player-label": "KPMG &middot; A day at the office",
+                "video-caption": "The film was made by us as interns, autumn 2026.",
+                "video-fallback": "Your browser does not support video playback."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-i18n]');
+
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+
+                // 1. If it's the first time running, save whatever original Norwegian is written in the HTML markup
+                if (!element.hasAttribute('data-original-no')) {
+                    element.setAttribute('data-original-no', element.innerHTML.trim());
+                }
+
+                // 2. Route text values based on language choice
+                if (lang === 'en' && translations.en[key]) {
+                    element.innerHTML = translations.en[key];
+                } else {
+                    // Fall back cleanly to the original saved Norwegian text
+                    element.innerHTML = element.getAttribute('data-original-no');
+                }
+            });
+
+            document.getElementById('btn-no').classList.toggle('active', lang === 'no');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+            localStorage.setItem('diaryLanguage', lang);
+        }
+
+        // DOM Interaction logic for Mobile Burger actions
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('diaryLanguage') || 'no';
+            setLanguage(savedLang);
+
+            const burgerBtn = document.getElementById('burgerBtn');
+            const navMenu = document.getElementById('navMenu');
+            const menuLinks = document.querySelectorAll('.nav-links a');
+
+            if (burgerBtn && navMenu) {
+                // Toggle view configurations when clicked
+                burgerBtn.addEventListener('click', () => {
+                    burgerBtn.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                // Automatically fold up menu when hitting internal links
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        burgerBtn.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+    <script src="site.js?v=3"></script>
+</body>
+</html>

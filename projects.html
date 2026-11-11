@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prosjekter</title>
-    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="site.css?v=3">
 
     <style>
         /* Container alignment for language switchers */
@@ -80,6 +80,13 @@
                     </svg>
                     <span data-i18n="nav-status2">Status 2</span>
                 </a>
+                <a href="expo.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="M10 9.5v5l4.5-2.5L10 9.5Z" />
+                    </svg>
+                    <span data-i18n="nav-expo">Expo</span>
+                </a>
             </div>
 
             <!-- Container for buttons -->
@@ -105,9 +112,22 @@
 
     <main class="container">
 
-        <header class="page-header">
-            <p class="eyebrow" data-i18n="header-eyebrow">Dokumentasjon</p>
-            <h1 data-i18n="header-title">Prosjekter</h1>
+        <header class="sn-hero">
+            <div>
+                <p class="sn-eyebrow" data-i18n="header-eyebrow">Dokumentasjon</p>
+                <h1 data-i18n="header-title">Prosjekter</h1>
+                <p data-i18n="sn-hero-text"><span class="sn-hl">Claude Code &times; ServiceNow.</span> To sammenhengende prosjekter om hvordan KI kan brukes i hele utviklingsprosessen på plattformen.</p>
+                <ul class="sn-checks">
+                    <li data-i18n="sn-check-1">Prompting-strategi og kontekststyring</li>
+                    <li data-i18n="sn-check-2">Arbeidsflyt og kvalitetskontroll</li>
+                    <li data-i18n="sn-check-3">Systematisk logging av hvert eksperiment</li>
+                </ul>
+                <a class="sn-btn" href="status2.html">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+                    <span data-i18n="sn-btn">Se siste status</span>
+                </a>
+            </div>
+            <img class="sn-hero-art" src="img/sn/hero.svg" alt="">
         </header>
 
         <section class="stat-grid">
@@ -118,7 +138,7 @@
                     </svg>
                 </span>
                 <span class="stat-text">
-                    <span class="stat-value">2</span>
+                    <span class="stat-value" data-count>2</span>
                     <span class="stat-label" data-i18n="stat-projects-label">Prosjekter</span>
                 </span>
             </div>
@@ -132,7 +152,7 @@
                     </svg>
                 </span>
                 <span class="stat-text">
-                    <span class="stat-value">4</span>
+                    <span class="stat-value" data-count>4</span>
                     <span class="stat-label" data-i18n="stat-axes-label">Fokusområder</span>
                 </span>
             </div>
@@ -147,7 +167,7 @@
                     </svg>
                 </span>
                 <span class="stat-text">
-                    <span class="stat-value">2</span>
+                    <span class="stat-value" data-count>2</span>
                     <span class="stat-label" data-i18n="stat-students-label">Praksisstudenter</span>
                 </span>
             </div>
@@ -171,12 +191,16 @@
 
         <section class="projects">
 
-            <h2 class="projects-heading" data-i18n="projects-heading">Prosjektene våre</h2>
-            <p class="projects-intro" data-i18n="projects-intro">
+            <div class="sn-section-head">
+                <p class="sn-eyebrow" data-i18n="sn-go-further">Gå videre</p>
+                <h2 data-i18n="projects-heading">Prosjektene våre</h2>
+                <p data-i18n="projects-intro">
                 Gjennom høstsemesteret hos KPMG jobber jeg og Einar med to sammenhengende prosjekter innenfor ServiceNow-utvikling, der hovedfokuset vårt er å utforske og dokumentere hvordan AI-verktøyet Claude Code kan brukes i utviklingsprosessen på plattformen.
             </p>
+            </div>
 
-            <article class="project-card">
+            <article class="project-card sn-card">
+                <div class="sn-banner green"></div>
                 <div class="project-header">
                     <span class="project-name" data-i18n="project-badge-main">Hovedprosjekt</span>
                     <h3 class="project-title" data-i18n="project-main-title">Metodikk for bruk av Claude Code i ServiceNow-utvikling</h3>
@@ -187,9 +211,15 @@
                 <p data-i18n="project-main-p2">
                     Vi samler funnene fortløpende i et eget dokumentasjons-repo (claude-code-sdlc-methodology), strukturert etter de fire aksene. Hvert eksperiment vi gjennomfører logges systematisk med hvilken prompt som ble brukt, hvilken kontekst Claude Code hadde tilgjengelig, hva resultatet ble, og hvilke manuelle korreksjoner som var nødvendige. Denne systematiske tilnærmingen gjør at vi kan sammenligne ulike metoder objektivt, i stedet for å basere konklusjoner på enkeltinntrykk.
                 </p>
+                <div class="sn-pills">
+                    <span class="sn-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>Claude Code</span>
+                    <span class="sn-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>ServiceNow SDK</span>
+                    <span class="sn-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>GitHub</span>
+                </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card sn-card">
+                <div class="sn-banner blue"></div>
                 <div class="project-header">
                     <span class="project-name" data-i18n="project-badge-support">Støtteprosjekt</span>
                     <h3 class="project-title" data-i18n="project-support-title">Applikasjon for ressursallokering</h3>
@@ -197,17 +227,220 @@
                 <p data-i18n="project-support-p1">
                     For å ha et konkret og realistisk case å teste metodikken på, bygger vi parallelt en ServiceNow-applikasjon for ressursallokering. Dette prosjektet er i seg selv ikke hovedmålet — det fungerer som et testmiljø der vi kan gjenskape samme applikasjon flere ganger med ulike tilnærminger til Claude Code, for å produsere sammenlignbare funn til metodikk-dokumentasjonen. Vi eksperimenterer blant annet med å koble applikasjonen til et eget kildekode-repo via ServiceNow sin Source Control-modul, slik at Claude Code kan jobbe med applikasjonskoden lokalt før endringene importeres tilbake til instansen.
                 </p>
+                <figure class="browser-frame">
+                    <div class="browser-bar"><i></i><i></i><i></i><span>dev.service-now.com/now/resource-allocation</span></div>
+                    <img src="img/project1.png" alt="Skjermbilde av ressursallokerings-appen" data-caption="Ressursallokerings-appen">
+                </figure>
+                <div class="sn-pills">
+                    <span class="sn-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>ServiceNow Studio</span>
+                    <span class="sn-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>Source Control</span>
+                    <span class="sn-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>App Engine</span>
+                </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card sn-card">
+                <div class="sn-banner gold"></div>
                 <div class="project-header">
                     <span class="project-name" data-i18n="project-badge-learning">Læringsutbytte</span>
                 </div>
                 <p data-i18n="project-learning-p1">
                     Kombinasjonen av de to prosjektene gir oss praktisk erfaring med sentrale deler av ServiceNow-utvikling — blant annet scoped applications, Studio, Source Control-integrasjon og applikasjonsarkitektur — samtidig som vi opparbeider oss en mer overordnet forståelse av hvordan AI-assisterte utviklingsverktøy best kan tas i bruk i en strukturert utviklingsprosess. Vi anser dette som spesielt relevant erfaring, både fordi ServiceNow-utvikling er en direkte overførbar ferdighet, og fordi metodikken vi dokumenterer rundt AI-assistert utvikling er et område i rask utvikling som blir stadig mer relevant i konsulentbransjen.
                 </p>
+                <div class="sn-pills">
+                    <span class="sn-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>Scoped apps</span>
+                    <span class="sn-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>UI Builder</span>
+                    <span class="sn-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>Now Assist</span>
+                </div>
             </article>
 
+        </section>
+
+
+        <section class="reveal">
+            <div class="sn-section-head">
+                <p class="sn-eyebrow" data-i18n="axes-eyebrow">Metodikk</p>
+                <h2 data-i18n="axes-heading">Fire akser vi undersøker</h2>
+            </div>
+            <div class="axes">
+                <article class="axis" style="--axis-color: #1fa889">
+                    <span class="axis-no">01</span>
+                    <span class="axis-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 12h5"/></svg></span>
+                    <h3 data-i18n="axis-prompt-title">Prompting-strategi</h3>
+                    <p data-i18n="axis-prompt-text">Hvordan vi formulerer oppgaven: språk, struktur og tydelige krav i en spesifikasjon.</p>
+                </article>
+                <article class="axis" style="--axis-color: #4b72d6">
+                    <span class="axis-no">02</span>
+                    <span class="axis-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.8"/></svg></span>
+                    <h3 data-i18n="axis-context-title">Kontekststyring</h3>
+                    <p data-i18n="axis-context-text">Hvor mye Claude trenger å vite for å forstå nok, uten at vi deler hele prosjektet.</p>
+                </article>
+                <article class="axis" style="--axis-color: #d4a93a">
+                    <span class="axis-no">03</span>
+                    <span class="axis-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6H14a4 4 0 0 1 4 4v5.5"/></svg></span>
+                    <h3 data-i18n="axis-workflow-title">Arbeidsflyt</h3>
+                    <p data-i18n="axis-workflow-text">Hvordan Claude Code, Studio, Source Control og UI Builder henger sammen.</p>
+                </article>
+                <article class="axis" style="--axis-color: #2fbf4a">
+                    <span class="axis-no">04</span>
+                    <span class="axis-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg></span>
+                    <h3 data-i18n="axis-quality-title">Kvalitetskontroll</h3>
+                    <p data-i18n="axis-quality-text">Faste testoppskrifter, kjøringer mot kravene og manuelle korreksjoner.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <div class="sn-section-head">
+                <p class="sn-eyebrow" data-i18n="flow-eyebrow">Flow Designer</p>
+                <h2 data-i18n="flow-heading">Slik bygger vi med KI</h2>
+                <p data-i18n="flow-intro">Oppskriften vi har landet på så langt, tegnet som en flyt i ServiceNow.</p>
+            </div>
+            <div class="flow-designer">
+                <div class="flow-head">
+                    <span class="flow-name" data-i18n="flow-name">KI-assistert app-utvikling</span>
+                    <span class="sn-state" data-i18n="flow-active">Aktiv</span>
+                </div>
+                <ol class="flow-steps">
+                <li class="flow-step trigger">
+                    <span class="flow-icon">⚡</span>
+                    <div><b data-i18n="flow-t">Trigger: ny oppgave eller endring</b><span data-i18n="flow-t-sub">Et behov i ressursallokerings-appen</span></div>
+                    <span class="flow-tag">Trigger</span>
+                </li>
+                <li class="flow-step " style="--step-color: #1fa889">
+                    <span class="flow-icon">1</span>
+                    <div><b data-i18n="flow-s1">Skriv spesifikasjon</b><span data-i18n="flow-s1-sub">Krav og begrensninger i et eget dokument</span></div>
+                    <span class="flow-tag">Prompting</span>
+                </li>
+                <li class="flow-step " style="--step-color: #4b72d6">
+                    <span class="flow-icon">2</span>
+                    <div><b data-i18n="flow-s2">Claude Code bygger komponenter</b><span data-i18n="flow-s2-sub">Én komponent om gangen, ikke hele siden</span></div>
+                    <span class="flow-tag">Claude Code</span>
+                </li>
+                <li class="flow-step " style="--step-color: #3b8fc4">
+                    <span class="flow-icon">3</span>
+                    <div><b data-i18n="flow-s3">Synk til instansen</b><span data-i18n="flow-s3-sub">Via Source Control og ServiceNow SDK til PDI</span></div>
+                    <span class="flow-tag">Source Control</span>
+                </li>
+                <li class="flow-step " style="--step-color: #8d6bff">
+                    <span class="flow-icon">4</span>
+                    <div><b data-i18n="flow-s4">Sett sammen i UI Builder</b><span data-i18n="flow-s4-sub">Komponentene kan flyttes og endres fritt</span></div>
+                    <span class="flow-tag">UI Builder</span>
+                </li>
+                <li class="flow-step " style="--step-color: #d4a93a">
+                    <span class="flow-icon">5</span>
+                    <div><b data-i18n="flow-s5">Test mot kravene</b><span data-i18n="flow-s5-sub">Faste testoppskrifter, så testene kan gjentas likt</span></div>
+                    <span class="flow-tag">Test</span>
+                </li>
+                <li class="flow-step " style="--step-color: #2fbf4a">
+                    <span class="flow-icon">6</span>
+                    <div><b data-i18n="flow-s6">Logg funnene</b><span data-i18n="flow-s6-sub">Prompt, kontekst, resultat og manuelle korreksjoner</span></div>
+                    <span class="flow-tag">GitHub</span>
+                </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <div class="sn-section-head">
+                <p class="sn-eyebrow" data-i18n="list-eyebrow">Listevisning</p>
+                <h2 data-i18n="list-heading">Eksperimentlogg</h2>
+                <p data-i18n="list-intro">Et utvalg av eksperimentene fra dagboken, samlet slik en liste ser ut i ServiceNow.</p>
+            </div>
+            <div class="sn-list">
+                <div class="sn-list-bar">
+                    <span class="title" data-i18n="list-title">Eksperimenter</span>
+                    <span class="crumb" data-i18n="list-crumb">Alle &gt; Sortert etter uke</span>
+                    <span class="count" data-i18n="list-count">9 records</span>
+                </div>
+                <div class="sn-list-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th data-i18n="th-number">Nummer</th>
+                                <th data-i18n="th-exp">Eksperiment</th>
+                                <th data-i18n="th-axis">Akse</th>
+                                <th data-i18n="th-week">Uke</th>
+                                <th data-i18n="th-result">Funn</th>
+                                <th data-i18n="th-state">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="num">EXP0001001</td>
+                            <td class="exp" data-i18n="exp1-name">Claude Code vs. Now Assist</td>
+                            <td data-i18n="exp1-axis">Arbeidsflyt</td>
+                            <td>36</td>
+                            <td data-i18n="exp1-res">Hva fungerer best til ulike formål</td>
+                            <td><span class="state logged" data-i18n="state-logged">Logget</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">EXP0001002</td>
+                            <td class="exp" data-i18n="exp2-name">Norsk vs. engelsk prompt</td>
+                            <td data-i18n="exp2-axis">Prompting</td>
+                            <td>37</td>
+                            <td data-i18n="exp2-res">Hvordan språket påvirker svarene fra Claude</td>
+                            <td><span class="state logged" data-i18n="state-logged">Logget</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">EXP0001003</td>
+                            <td class="exp" data-i18n="exp3-name">Komponenter i stedet for hel side</td>
+                            <td data-i18n="exp3-axis">Arbeidsflyt</td>
+                            <td>39</td>
+                            <td data-i18n="exp3-res">Lettere å flytte og endre i UI Builder</td>
+                            <td><span class="state logged" data-i18n="state-logged">Logget</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">EXP0001004</td>
+                            <td class="exp" data-i18n="exp4-name">Kjøringer etter spesifikke krav</td>
+                            <td data-i18n="exp4-axis">Prompting</td>
+                            <td>40–42</td>
+                            <td data-i18n="exp4-res">Resultatene varierer med kravene vi setter</td>
+                            <td><span class="state logged" data-i18n="state-logged">Logget</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">EXP0001005</td>
+                            <td class="exp" data-i18n="exp5-name">AIUX og Lux</td>
+                            <td data-i18n="exp5-axis">Arbeidsflyt</td>
+                            <td>43</td>
+                            <td data-i18n="exp5-res">Enkelt å utvikle i, men gamle oppsett må endres</td>
+                            <td><span class="state logged" data-i18n="state-logged">Logget</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">EXP0001006</td>
+                            <td class="exp" data-i18n="exp6-name">Stor vs. liten modell</td>
+                            <td data-i18n="exp6-axis">Kvalitet</td>
+                            <td>44</td>
+                            <td data-i18n="exp6-res">Stor: bedre på avansert kode. Liten: raskere og billigere</td>
+                            <td><span class="state logged" data-i18n="state-logged">Logget</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">EXP0001007</td>
+                            <td class="exp" data-i18n="exp7-name">Nyeste spesifikasjon</td>
+                            <td data-i18n="exp7-axis">Kvalitet</td>
+                            <td>45</td>
+                            <td data-i18n="exp7-res">Alle kjøringene besto</td>
+                            <td><span class="state passed" data-i18n="state-passed">Bestått</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">EXP0001008</td>
+                            <td class="exp" data-i18n="exp8-name">Håndtering av feil</td>
+                            <td data-i18n="exp8-axis">Kvalitet</td>
+                            <td>46</td>
+                            <td data-i18n="exp8-res">Ny testtype, under arbeid</td>
+                            <td><span class="state ongoing" data-i18n="state-ongoing">Pågår</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">EXP0001009</td>
+                            <td class="exp" data-i18n="exp9-name">Feilsøking på egen hånd</td>
+                            <td data-i18n="exp9-axis">Kvalitet</td>
+                            <td>–</td>
+                            <td data-i18n="exp9-res">Neste steg</td>
+                            <td><span class="state planned" data-i18n="state-planned">Planlagt</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
 
     </main>
@@ -220,6 +453,7 @@
                 "nav-prosjekt": "Projects",
                 "nav-status1": "Status 1",
                 "nav-status2": "Status 2",
+                "nav-expo": "Expo",
                 "logo-sub": "Intern diary",
                 "sidebar-caption": "KPMG internship &middot; Autumn 2026",
                 "header-eyebrow": "Documentation",
@@ -228,6 +462,84 @@
                 "stat-axes-label": "Focus areas",
                 "stat-students-label": "Interns",
                 "stat-platform-label": "Platform",
+                "sn-hero-text": "<span class=\"sn-hl\">Claude Code &times; ServiceNow.</span> Two connected projects on how AI can be used throughout the development process on the platform.",
+                "sn-check-1": "Prompting strategy and context management",
+                "sn-check-2": "Workflow and quality control",
+                "sn-check-3": "Systematic logging of every experiment",
+                "sn-btn": "See latest status",
+                "sn-go-further": "Go further",
+                "axes-eyebrow": "Methodology",
+                "axes-heading": "Four axes we investigate",
+                "axis-prompt-title": "Prompting strategy",
+                "axis-prompt-text": "How we phrase the task: language, structure and clear requirements in a specification.",
+                "axis-context-title": "Context management",
+                "axis-context-text": "How much Claude needs to know to understand enough, without sharing the whole project.",
+                "axis-workflow-title": "Workflow",
+                "axis-workflow-text": "How Claude Code, Studio, Source Control and UI Builder fit together.",
+                "axis-quality-title": "Quality control",
+                "axis-quality-text": "Fixed test recipes, runs against the requirements and manual corrections.",
+                "flow-eyebrow": "Flow Designer",
+                "flow-heading": "How we build with AI",
+                "flow-intro": "The recipe we have landed on so far, drawn as a flow in ServiceNow.",
+                "flow-name": "AI-assisted app development",
+                "flow-active": "Active",
+                "flow-t": "Trigger: new task or change",
+                "flow-t-sub": "A need in the resource allocation app",
+                "flow-s1": "Write a specification",
+                "flow-s1-sub": "Requirements and constraints in a separate document",
+                "flow-s2": "Claude Code builds components",
+                "flow-s2-sub": "One component at a time, not the whole page",
+                "flow-s3": "Sync to the instance",
+                "flow-s3-sub": "Through Source Control and the ServiceNow SDK to the PDI",
+                "flow-s4": "Assemble in UI Builder",
+                "flow-s4-sub": "Components can be moved and changed freely",
+                "flow-s5": "Test against the requirements",
+                "flow-s5-sub": "Fixed test recipes so tests run the same every time",
+                "flow-s6": "Log the findings",
+                "flow-s6-sub": "Prompt, context, result and manual corrections",
+                "list-eyebrow": "List view",
+                "list-heading": "Experiment log",
+                "list-intro": "A selection of the experiments from the diary, laid out the way a list looks in ServiceNow.",
+                "list-title": "Experiments",
+                "list-crumb": "All &gt; Sorted by week",
+                "list-count": "9 records",
+                "th-number": "Number",
+                "th-exp": "Experiment",
+                "th-axis": "Axis",
+                "th-week": "Week",
+                "th-result": "Finding",
+                "th-state": "State",
+                "state-logged": "Logged",
+                "state-passed": "Passed",
+                "state-ongoing": "In progress",
+                "state-planned": "Planned",
+                "exp1-name": "Claude Code vs. Now Assist",
+                "exp1-axis": "Workflow",
+                "exp1-res": "What works best for different purposes",
+                "exp2-name": "Norwegian vs. English prompts",
+                "exp2-axis": "Prompting",
+                "exp2-res": "How language affects the answers from Claude",
+                "exp3-name": "Components instead of a whole page",
+                "exp3-axis": "Workflow",
+                "exp3-res": "Easier to move and change in UI Builder",
+                "exp4-name": "Runs with specific requirements",
+                "exp4-axis": "Prompting",
+                "exp4-res": "Results vary with the requirements we set",
+                "exp5-name": "AIUX and Lux",
+                "exp5-axis": "Workflow",
+                "exp5-res": "Easy to build with, but older setups must be changed",
+                "exp6-name": "Large vs. small model",
+                "exp6-axis": "Quality",
+                "exp6-res": "Large: better at advanced code. Small: faster and cheaper",
+                "exp7-name": "Latest specification",
+                "exp7-axis": "Quality",
+                "exp7-res": "All runs passed",
+                "exp8-name": "Handling errors",
+                "exp8-axis": "Quality",
+                "exp8-res": "New test type, in progress",
+                "exp9-name": "Debugging on its own",
+                "exp9-axis": "Quality",
+                "exp9-res": "Next step",
                 "projects-heading": "Our projects",
                 "projects-intro": "Throughout the autumn semester at KPMG, Einar and I are working on two interconnected projects within ServiceNow development, with our main focus on exploring and documenting how the AI tool Claude Code can be used in the development process on the platform.",
                 "project-badge-main": "Main project",
@@ -300,6 +612,6 @@
             }
         });
     </script>
-
+    <script src="site.js?v=3"></script>
 </body>
 </html>
