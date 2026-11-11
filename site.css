@@ -1826,7 +1826,7 @@ h1 {
     width: fit-content;
     max-width: 100%;
     gap: 4px;
-    margin: 0 0 26px;
+    margin: 0 auto 26px;
     padding: 5px;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.92);
