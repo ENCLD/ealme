@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refleksjon</title>
+    <link rel="stylesheet" href="site.css?v=3">
+
+    <style>
+        /* Container alignment for language switchers */
+        .controls {
+            display: inline-flex;
+            gap: 6px;
+            background-color: #f1f3f5;
+            padding: 4px;
+            border-radius: 30px;
+        }
+
+            .controls button {
+                background: transparent;
+                color: #495057;
+                border: none;
+                padding: 6px 14px;
+                font-size: 13px;
+                font-weight: 600;
+                font-family: inherit;
+                cursor: pointer;
+                border-radius: 20px;
+                transition: all 0.2s ease-in-out;
+            }
+
+                .controls button:hover {
+                    color: #1a1a1a;
+                }
+
+                .controls button.active {
+                    background-color: #ffffff;
+                    color: #000000;
+                    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+                }
+
+        /* Static text sections */
+        .reflection-text {
+            margin: 0;
+            color: var(--primary-text);
+            font-size: 15px;
+            line-height: 1.7;
+            white-space: pre-line;
+        }
+
+        /* site.css removes card top padding for banner cards; restore it for cards without a banner */
+        .project-card.sn-card:not(:has(> .sn-banner)) {
+            padding-top: 26px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="top-menu">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-title">KPMG</span>
+                <span class="logo-sub" data-i18n="logo-sub">Praksisstudentenes dagbok</span>
+            </a>
+
+            <!-- This will hide/show based on the site.css mobile setup -->
+            <div class="nav-links" id="navMenu">
+                <a href="index.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 5.5C4 4.67 4.67 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13Z" />
+                        <path d="M20 5.5c0-.83-.67-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z" />
+                    </svg>
+                    <span data-i18n="nav-dagbok">Dagbok</span>
+                </a>
+                <a href="projects.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 7a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Z" />
+                    </svg>
+                    <span data-i18n="nav-prosjekt">Prosjekter</span>
+                </a>
+                <a href="status1.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 17V9M15 17v-4M12 17V5M4 19h16" />
+                    </svg>
+                    <span data-i18n="nav-status1">Status 1</span>
+                </a>
+                <a href="status2.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 17V9M15 17v-4M12 17V5M4 19h16" />
+                    </svg>
+                    <span data-i18n="nav-status2">Status 2</span>
+                </a>
+                <a href="expo.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="M10 9.5v5l4.5-2.5L10 9.5Z" />
+                    </svg>
+                    <span data-i18n="nav-expo">Expo</span>
+                </a>
+                <a href="reflection.html" class="active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 20h4L19 9a2.83 2.83 0 0 0-4-4L4 16v4Z" />
+                        <path d="M13.5 6.5l4 4" />
+                    </svg>
+                    <span data-i18n="nav-reflection">Refleksjon</span>
+                </a>
+            </div>
+
+            <!-- Container for buttons -->
+            <div class="controls-wrapper" style="display: flex; align-items: center; gap: 10px;">
+                <!-- Styled Pill Container Switch -->
+                <div class="controls">
+                    <button id="btn-no" class="active" onclick="setLanguage('no')">Norsk</button>
+                    <button id="btn-en" onclick="setLanguage('en')">English</button>
+                </div>
+
+                <!-- Burger button sits beautifully on the side -->
+                <button class="burger-btn" id="burgerBtn" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+
+            <p class="sidebar-caption" data-i18n="sidebar-caption">KPMG praksis &middot; Høst 2026</p>
+        </div>
+    </nav>
+
+
+    <main class="container">
+
+        <header class="page-header">
+            <p class="eyebrow" data-i18n="header-eyebrow">Dokumentasjon</p>
+            <h1 data-i18n="header-title">Refleksjon</h1>
+            <p class="page-note" data-i18n="header-note">
+                En refleksjon over hele praksisperioden: hva vi har gjort, lært og hva som gjenstår.
+            </p>
+        </header>
+
+        <section class="projects">
+
+            <article class="project-card sn-card">
+                <div class="sn-banner blue"></div>
+                <div class="project-header">
+                    <span class="project-name" data-i18n="sec-work-badge">Arbeid</span>
+                    <h3 class="project-title" data-i18n="sec-work-title">Hva har vi jobbet med?</h3>
+                </div>
+                <p class="reflection-text" data-i18n="sec-work-text">I KPMG har vi jobbet med Claude Code og ServiceNow-plattformen. Målet for perioden var å lage en «oppskrift» som dokumenterer hvordan Claude Code kan brukes til å utvikle ServiceNow-applikasjoner. Vi har tatt for oss modellvalg, prompting, pris og utviklingstid. I starten måtte vi ta noen kurs i ServiceNow, og underveis har vi hatt diskusjoner med kolleger om bruk av KI. Dette har lært oss når og hvordan en skal bruke KI. Denne kompetansen vil vi ta med videre til neste prosjekt.</p>
+            </article>
+
+            <article class="project-card sn-card">
+                <div class="project-header">
+                    <span class="project-name" data-i18n="sec-einar-badge">Einar</span>
+                    <h3 class="project-title" data-i18n="sec-einar-title">Einars refleksjon</h3>
+                </div>
+                <p class="reflection-text" data-i18n="sec-einar-text">Jeg er skikkelig glad for at KPMG valgte oss til praksisplassene. Det har vært en givende periode med masse nye rammeverk, verktøy og plattformer. ServiceNow er en av plattformene jeg aldri hadde hørt om før, selv om den brukes av bedrifter over hele verden. Siden dette var helt nytt, ble det noen utfordringer underveis, men jeg liker å lære om nye ting, så det var ikke et problem. Etter litt utforskning og kurs var vi plutselig i gang. Ved å bruke KI i praksisperioden har jeg også lært mye om hvordan, når og hva jeg skal bruke KI til. Testene er noe av det som har lært meg mest. KI har tydelige svakheter en bør kjenne til og ta hensyn til. Jeg forstår nå at KI ikke er en ren erstatning for en utvikler, men heller et verktøy for å utvikle raskere og lage mer kompliserte applikasjoner.</p>
+            </article>
+
+            <article class="project-card sn-card">
+                <div class="project-header">
+                    <span class="project-name" data-i18n="sec-hamdi-badge">Hamdi</span>
+                    <h3 class="project-title" data-i18n="sec-hamdi-title">Hamdis refleksjon</h3>
+                </div>
+                <p class="reflection-text" data-i18n="sec-hamdi-text">Skriv her.</p>
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <script>
+        // JavaScript only needs the English data
+        const translations = {
+            en: {
+                "nav-dagbok": "Diary",
+                "nav-prosjekt": "Projects",
+                "nav-status1": "Status 1",
+                "nav-status2": "Status 2",
+                "nav-expo": "Expo",
+                "nav-reflection": "Reflection",
+                "logo-sub": "Intern students' diary",
+                "sidebar-caption": "KPMG internship &middot; Autumn 2026",
+                "header-eyebrow": "Documentation",
+                "header-title": "Reflection",
+                "header-note": "A reflection over the whole internship: what we have done, what we have learned, and what remains.",
+                "sec-work-badge": "Work",
+                "sec-work-title": "What have we worked on?",
+                "sec-einar-badge": "Einar",
+                "sec-einar-title": "Einar's reflection",
+                "sec-hamdi-badge": "Hamdi",
+                "sec-hamdi-title": "Hamdi's reflection",
+                "sec-work-text": "At KPMG we have worked with Claude Code and the ServiceNow platform. The goal for the period was to create a \"recipe\" documenting how Claude Code can be used to develop ServiceNow applications. We have looked at model choice, prompting, cost and development time. At the start we had to take some ServiceNow courses, and along the way we have had discussions with colleagues about the use of AI. This has taught us when and how to use AI. We will bring this competence with us to the next project.",
+                "sec-einar-text": "I am really happy that KPMG chose us for the internship positions. It has been a rewarding period with lots of new frameworks, tools and platforms. ServiceNow is one of the platforms I had never heard of before, even though it is used by companies all over the world. Since this was completely new, there were some challenges along the way, but I like learning new things, so it was not a problem. After some exploring and courses, we were suddenly up and running. By using AI during the internship I have also learned a lot about how, when and what to use AI for. The tests are some of what has taught me the most. AI has clear weaknesses that one should know about and take into account. I now understand that AI is not a pure replacement for a developer, but rather a tool for developing faster and building more complex applications.",
+                "sec-hamdi-text": "Write here."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (!element.hasAttribute('data-original-no')) {
+                    element.setAttribute('data-original-no', element.innerHTML.trim());
+                }
+                if (lang === 'en' && translations.en[key]) {
+                    element.innerHTML = translations.en[key];
+                } else {
+                    element.innerHTML = element.getAttribute('data-original-no');
+                }
+            });
+
+            document.getElementById('btn-no').classList.toggle('active', lang === 'no');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+            try {
+                localStorage.setItem('diaryLanguage', lang);
+            } catch (e) { /* storage unavailable, language still switches */ }
+        }
+
+        // Mobile burger menu, same as the other pages
+        window.addEventListener('DOMContentLoaded', () => {
+            let savedLang = 'no';
+            try { savedLang = localStorage.getItem('diaryLanguage') || 'no'; } catch (e) { /* ignore */ }
+            setLanguage(savedLang);
+
+            const burgerBtn = document.getElementById('burgerBtn');
+            const navMenu = document.getElementById('navMenu');
+            if (burgerBtn && navMenu) {
+                burgerBtn.addEventListener('click', () => {
+                    burgerBtn.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        burgerBtn.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
